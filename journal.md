@@ -25,7 +25,7 @@ Sondage connaissances web: https://www.wooclap.com/PROGINTER
 
 [Crockford on JavaScript - Chapter 2: And Then There Was JavaScript](https://www.youtube.com/watch?v=RO1Wnu-xKoY&list=PL7664379246A246CB) (vidéo)
 
-Une vraie page blanche sur votre navigateur pour expérimenter avec la console? [about:blank](about:blank), puis ⌥⌘J (macOS) ou ⇧⌃J (Windows) afin d'ouvrir la console JavaScript.
+Une vraie page blanche sur votre navigateur pour expérimenter avec la console? `about:blank`, puis ⌥⌘J (macOS) ou ⇧⌃J (Windows) afin d'ouvrir la console JavaScript.
 
 ### Série d'exercices
 - [Variables JS](https://gist.github.com/DigitalDW/b0ea602b46cad395ddc384c2d7ad750b) (jusqu'à exercice 2.5)
