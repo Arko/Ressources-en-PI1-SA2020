@@ -47,8 +47,8 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 
 ## S3: 30.09.2020
 
-[Référence des éléments traités durant les séances 2 et 3](Réference%20JavaScript) (01 à 08)
-[Fichier HTML vu en cours avec manipulations du DOM](Live%20coding/s3-dom.html)
+- [Référence des éléments traités durant les séances 2 et 3](Réference%20JavaScript) (fichiers 01 à 08)
+- [Fichier HTML vu en cours avec manipulations du DOM](Live%20coding/s3-dom.html)
 
 ### Séries d'exercices
 - [Fonctions](https://gist.github.com/DigitalDW/91cc053d8a9eeebfd44ade43b1e79521)
@@ -63,7 +63,7 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 - [MDN: Référence du DOM](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model)
 
 
-# S4: 7.10.20
+## S4: 7.10.20
 
 ### Série d'exercices
 - [S4 - readme.md](Exercices/S4/readme.md)
