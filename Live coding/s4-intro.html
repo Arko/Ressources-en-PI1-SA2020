@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>S4</h1>
+    <input type="text">
+    <button id="monBouton">clic</button>
+    <p>...</p>
+    <script>
+        const input = document.querySelector('input');
+        const monBouton = document.querySelector('#monBouton');
+        const monP = document.querySelector('p');
+
+        monBouton.addEventListener('click', surClic);
+
+        function estPair(valeur) {
+            return (valeur % 2) == 0;
+        }
+
+        function carré(valeur) {
+            return valeur ** 2;
+        }
+
+        function surClic() {
+            const valeur = input.value;
+
+            monP.innerHTML = carré(valeur);
+
+            for (let i = 1; i <= 10; i++) {
+                console.log(valeur * i);
+            }            
+        }
+    </script>
+</body>
+</html>

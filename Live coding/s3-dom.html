@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p.small {
+            font-size: 80%;
+        }
+        .rouge {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ma page</h1>
+    <p>Bonjour et bienvenue !</p>
+    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="small">Dolorum aliquid placeat excepturi, quaerat voluptates repellendus perferendis corporis?</p>
+    <p>Votre nom: <input type="text"></p>
+    <script>
+        let lien = document.createElement('a');
+        lien.innerHTML = 'Cliquez ici';
+        lien.setAttribute('href', 'https://unil.ch');
+        lien.classList.add('rouge');
+        document.body.appendChild(lien);
+        lien.addEventListener('mouseover', () => {
+            let nom = document.querySelector('input').value;
+            console.log(`Cliquez ${nom} !!!`);
+        });
+    </script>
+</body>
+</html>

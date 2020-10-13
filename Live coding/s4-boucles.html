@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: aquamarine;
+            text-align: center;
+            width: 2em;
+            margin: 2px;
+        }
+        .bleu {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function estPair(valeur) {
+            return (valeur % 2) == 0;
+        }
+
+        function creerDiv(ligne, colonne) {
+            const monDiv = document.createElement('div');
+            monDiv.innerHTML = colonne;
+            document.body.appendChild(monDiv);
+
+            if (ligne == colonne || colonne == 6 - ligne) {
+                monDiv.classList.add('bleu');
+            }
+        }
+
+        function creerLigne(i) {
+            for (let j = 1; j <= 5; j++) {
+                creerDiv(i, j);
+            }
+            const br = document.createElement('br');
+            document.body.appendChild(br);
+        }
+
+        function creerGrille() {
+            // Créer 5 lignes
+            for (let i = 1; i <= 5; i++) {
+                creerLigne(i);
+            }
+        }
+
+        creerGrille();
+    </script>
+</body>
+</html>
