@@ -74,3 +74,7 @@ Extensions recommandées pour VS Code:
 - [Créer un projet avec VS Code - Partie 2 - Ajouter CSS et JavaScript](https://rec.unil.ch/videos/creer-un-projet-avec-vs-code-partie-2-ajouter-css-et-javascript/)
 - [Créer un projet avec VS Code - Partie 3 - Lier des fichiers CSS et JavaScript](https://rec.unil.ch/videos/creer-un-projet-avec-vs-code-partie-3-lier-des-fichiers-css-et-javascript/)
 
+
+## Journal des séances
+
+→ Consultez le fichier [journal.md](journal.md) pour accéder aux ressources et liens évoqués durant chaque séance.
