@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>clic</button>
+    <p>...</p>
+    <script>
+        // Récupérer les éléments HTML
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        
+        // Ajouter un événement de clic sur le bouton
+        button.addEventListener('click', surClic);
+
+        // Fonction d'affichage d'un résultat
+        function montrerRésultat(r) {
+            const p = document.querySelector('p');
+            p.innerHTML = r;
+        }
+
+        // Code executé au clic sur le bouton
+        function surClic() {
+            const valeur = input.value;
+            if (Number(valeur)) {
+                alert('Ne pas entrer de nombre !');
+            } else {
+                montrerRésultat(input.value);
+            }
+        }
+    </script>
+</body>
+</html>

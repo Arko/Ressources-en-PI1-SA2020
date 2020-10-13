@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            padding: 10px;
+        }
+        
+        div{
+            padding: 10px;
+        }
+        
+        .NordSud{
+            margin-left: 20px;
+            margin-right: auto; 
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>Entrez une distance : <input type="number" id="Distance"></div>
+        <div id="Cardinal">
+            <div class="NordSud">
+                <button id="Nord">Nord</button>
+            </div>
+            <div>
+                <button id="Ouest">Ouest</button>
+                <button id="Est">Est</button>
+            </div>
+            <div class="NordSud"><button id="Sud">Sud</button></div>
+        </div>
+    </form>
+    <script>
+        // création de raccourcis vers les boutons
+        const b_dist = document.getElementById("Distance");
+        const b_nord = document.getElementById("Nord");
+        const b_sud = document.getElementById("Sud");
+        const b_est = document.getElementById("Est");
+        const b_ouest = document.getElementById("Ouest");
+        
+        // ajout de la fonction de déplacement
+        b_sud.addEventListener("click",deplacement);
+        b_nord.addEventListener("click",deplacement);
+        b_est.addEventListener("click",deplacement);
+        b_ouest.addEventListener("click",deplacement);
+        
+        function deplacement(event){
+            // annule le comportement par défaut
+            event.preventDefault()
+            
+            // etat de la victoire par defaut
+            let victoire = false;
+            
+            // récupération de la distance
+            let distance = Number(b_dist.value);
+            
+            // gérer les erreurs.  
+            
+            if(distance == ""){
+                let erreur = document.createElement("div");
+                erreur.innerHTML = "Entrez une valeur";
+                document.body.appendChild(erreur);
+            }
+            else if (distance < 0){
+                let erreur = document.createElement("div");
+                erreur.innerHTML = "Entrez un nombre positif.";
+                document.body.appendChild(erreur);
+            }
+            else if(distance == 0){
+                let surPlace = document.createElement("div");
+                surPlace.innerHTML = "Vous restez sur place.";
+                document.body.appendChild(surPlace);
+            }
+            // instruction attendue
+            else if(distance > 0){
+                let instruction = `Vous marchez direction ${this.id} pendant ${distance} kilomètres.`
+                console.log(instruction);
+                
+                if(distance == 6 && this.id == "Sud"){
+                    instruction += `<br> Vous trouvez le trésor !`
+                    victoire = true
+                }
+                // création du texte.
+                let noeud = document.createElement("div");
+                noeud.innerHTML = instruction;
+                document.body.appendChild(noeud);
+            }
+            if(victoire){
+                alert("Vous avez gagné!")
+            }
+        }
+    </script>
+</body>
+</html>

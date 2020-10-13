@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="direction" placeholder="direction">
+    <input type="text" id="distance" placeholder="distance">
+    <button>clic</button>
+    <p>...</p>
+    <script>
+        // Récupérer les éléments HTML
+        const inputDirection = document.querySelector('#direction');
+        const inputDistance = document.querySelector('#distance');
+        const button = document.querySelector('button');
+        
+        // Ajouter un événement de clic sur le bouton
+        button.addEventListener('click', surClic);
+
+        // Fonction d'affichage d'un résultat
+        function montrerRésultat(r) {
+            const p = document.querySelector('p');
+            p.innerHTML = r;
+        }
+
+        function déplacement(dir, dist) {
+            return `Vous êtes allé(e) au ${dir} pendant ${dist} km.`;
+        }
+
+        // Code executé au clic sur le bouton
+        function surClic() {
+            const dir = inputDirection.value;
+            const dist = inputDistance.value;
+            montrerRésultat(déplacement(dir, dist));
+        }
+    </script>
+</body>
+</html>

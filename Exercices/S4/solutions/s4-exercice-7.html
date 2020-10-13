@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zero {
+            margin-left: 27px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div id="nombres">
+            <div>
+                <input id="b_1" type="button" value="1">
+                <input id="b_2" type="button" value="2">
+                <input id="b_3" type="button" value="3">
+            </div>
+            <div>
+                <input id="b_4" type="button" value="4">
+                <input id="b_5" type="button" value="5">
+                <input id="b_6" type="button" value="6">
+            </div>
+            <div>
+                <input id="b_7" type="button" value="7">
+                <input id="b_8" type="button" value="8">
+                <input id="b_9" type="button" value="9">
+            </div>
+            <div>
+                <input class="zero" id="b_0" type="button" value="0">
+            </div>
+        </div>
+        <div>
+            <input id="addition" type="button" value="+">
+            <input id="soustraction" type="button" value="-">
+            <input id="egal" type="button" value="=">
+        </div>
+    </form>
+    <p id="message"></p>
+    
+    <script>
+        // création de raccourcis vers les boutons
+        const B_1 = document.getElementById('b_1');
+        const B_2 = document.getElementById('b_2');
+        const B_3 = document.getElementById('b_3');
+        const B_4 = document.getElementById('b_4');
+        const B_5 = document.getElementById('b_5');
+        const B_6 = document.getElementById('b_6');
+        const B_7 = document.getElementById('b_7');
+        const B_8 = document.getElementById('b_8');
+        const B_9 = document.getElementById('b_9');
+        const B_0 = document.getElementById('b_0');
+        const Addition = document.getElementById('addition');
+        const Soustraction = document.getElementById('soustraction');
+        const Egal = document.getElementById('egal');
+        
+        // définir la variable où se fera le calcul
+        let calcul = '' ;
+        
+        // Lorsqu'un bouton est utilisé ('click'), lance la fonction ajoutNombre
+        B_1.addEventListener('click', ajoutNombre);
+        B_2.addEventListener('click', ajoutNombre);
+        B_3.addEventListener('click', ajoutNombre);
+        B_4.addEventListener('click', ajoutNombre);
+        B_5.addEventListener('click', ajoutNombre);
+        B_6.addEventListener('click', ajoutNombre);
+        B_7.addEventListener('click', ajoutNombre);
+        B_8.addEventListener('click', ajoutNombre);
+        B_9.addEventListener('click', ajoutNombre);
+        B_0.addEventListener('click', ajoutNombre);
+        Addition.addEventListener('click', ajoutNombre);
+        Soustraction.addEventListener('click', ajoutNombre);
+        
+        // Lorsque le bouton egal est utilisé, lance la fonction calculer
+        Egal.addEventListener('click', calculer);
+        
+        // fonction qui affiche dans a console le calcul en cours
+        function ajoutNombre(){
+            // on écrit le calcul dans la page
+            document.getElementById('message').innerHTML += this.value;
+            calcul += this.value;
+        }
+        
+        // utilisation d'eval pour transformer le chaine de caractère en opération.  
+        function calculer(){
+            // on affiche le résultat précédé d'un '='
+            document.getElementById('message').innerHTML += ` = ${eval(calcul)} <br>`;
+            calcul = ''; // on réinitialise le calcul
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>clic</button>
+    <p></p>
+    <script>
+        // Récupérer les éléments HTML
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        
+        // Ajouter un événement de clic sur le bouton
+        button.addEventListener('click', surClic);
+
+        // Fonction d'affichage d'un résultat
+        function ajouter(valeur) {
+            const p = document.querySelector('p');
+            p.innerHTML += valeur;
+        }
+
+        // Code executé au clic sur le bouton
+        function surClic() {
+            // Récupérer la valeur entrée
+            const entrée = input.value;
+
+            // Vider le champ
+            input.value = '';
+
+            // Ecrire la valeur
+            ajouter(entrée);
+        }
+    </script>
+</body>
+</html>

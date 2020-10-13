@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result{
+            font-family: Arial;
+            text-align: justify;
+            width: 200px;
+        }
+        
+        body{
+            background-color: #d39743;
+            color: #203856;
+            padding: 15%;
+        }
+    </style>
+</head>
+<body>
+    <span id="result">Type some text</span>
+    <script>
+        // Fonction principale: va surtout assurer la mise en page du texte
+        function randomize(event) {
+            let texte = document.getElementById("result").innerHTML;
+            // 1) ...
+            if(texte == "Type some text"){
+                texte = document.getElementById("result").innerHTML = "";
+            }
+            // Série de condition:
+            // 2) ...
+            if(event.key == "Backspace"){
+                texte = document.getElementById("result").innerHTML = texte.substring(0, texte.length - 1);
+                if(texte == ""){
+                    document.getElementById("result").innerHTML = "Type some text"
+                }
+                // 3) ...
+            }else if(event.key == "Enter"){
+                document.getElementById("result").innerHTML += "<br>";
+                // 4) ...
+            }else if(event.key == "Tab"){
+                event.preventDefault()
+                document.getElementById("result").innerHTML += "    ";
+                // 5) ...
+            }else if(event.key != "Shift" && event.key != "Meta" && event.key != "Alt" && event.key != "Control" && event.key != "ArrowLeft" && event.key != "ArrowRight" && event.key != "ArrowUp" && event.key != "ArrowDown" && event.key != "Dead"){
+                // 6) ...
+                document.getElementById("result").innerHTML += capitalize(event.key);
+            }
+        }
+        
+        // Fonction secondaire: va mettre en majuscule les lettres de façon aléatoire
+        function capitalize(letter){
+            // 7) ...
+            let tableLetters = letter.split("")
+            tableLetters[0] = tableLetters[0].toLowerCase();
+            // 8) ...
+            if(Math.floor(Math.random()*2)){
+                tableLetters[0] = tableLetters[0].toUpperCase();
+            }
+            return tableLetters.join("")
+        }
+        
+        // 9) ...
+        document.addEventListener("keydown", function(event){
+            randomize(event)
+            console.log(event)
+        })
+    </script>
+</body>
+</html>
