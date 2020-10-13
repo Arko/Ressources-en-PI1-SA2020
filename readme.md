@@ -1,9 +1,9 @@
 # Ressources en PI1
 ## Semestre d'automne 2020
 
-Ensemble de documents de support utilisés dans le cadre du cours "Programmation pour Internet 1 - Javascript", dispensé par la Faculté des Lettres de l'Université de Lausanne, Section des sciences du language et de l'information (SLI). Cours donné par Loïc Cattani, avec l'assistance de Loris Rimaz.
+Ensemble de documents de support utilisés dans le cadre du cours "Programmation pour Internet 1 - Javascript", dispensé par la Faculté des Lettres de l'Université de Lausanne, Section des sciences du language et de l'information (SLI). Cours d'Isaac Pante, donné par Loïc Cattani, avec l'assistance de Loris Rimaz.
 
-Ces documents complètent la participation au cours, le travail personnel sur les exercices mis à disposition et une documentation plus complète que vous pourrez consulter en ligne.
+Ces documents complètent la participation au cours, le travail personnel sur les exercices mis à disposition et une documentation plus complète que vous pourrez consulter en ligne (liens ci-après).
 
 **Document vivant**, cet ensemble sera complété au fil des semaines avec les nouveaux éléments abordés.
 
@@ -12,7 +12,7 @@ Ces documents complètent la participation au cours, le travail personnel sur le
 
 - [Espace Moodle du cours](https://moodle.unil.ch/course/view.php?id=18304)
 - [Chaine Ubicast du cours](https://rec.unil.ch/channels/#prog-internet-sa20)
-- Discord "ProgInter" ([invitation](https://discord.gg/QphsFBE))
+- Discord "[ProgInter](https://discord.com/channels/755675122324734041)"
 - [Liste partagée des exercices et projets (Google Sheets)](https://docs.google.com/spreadsheets/d/1f8t6SRuc23jUdh0mnFyXfg3QcA22XoJfVDdBmKW6hHM/edit?usp=sharing)
 
 
