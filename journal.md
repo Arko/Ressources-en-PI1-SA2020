@@ -79,4 +79,5 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 
 ## S5: 14.10.20
 
-...
+### Série d'exercices
+- [S5 - readme.md](Exercices/S5/readme.md)
