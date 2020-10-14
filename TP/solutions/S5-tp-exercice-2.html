@@ -17,13 +17,15 @@
 
 			function ajoutResultat() {
 				const valeurInitiale = Number(monP.innerHTML);
-				console.log(valeurInitiale);
 				if (valeurInitiale) {
 					const valeurFinale = valeurInitiale + 1;
 					monP.innerHTML = valeurFinale;
 				} else {
 					monP.innerHTML = 1;
 				}
+
+				// Pour le fun, version ES6 :
+				// monP.innerHTML = valeurInitiale ? valeurInitiale + 1 : 1;
 			}
 		</script>
 	</body>
