@@ -11,6 +11,7 @@
     <script>
         // Récupérer les éléments HTML
         const monInput = document.querySelector('input');
+        const p = document.querySelector('p');
         
         // Ajouter un événement input sur le champ de texte
         // → A chaque entrée clavier, un événement sera lancé
@@ -18,7 +19,6 @@
 
         // Fonction d'affichage d'un résultat
         function montrerRésultat(r) {
-            const p = document.querySelector('p');
             p.innerHTML = r;
         }
 
