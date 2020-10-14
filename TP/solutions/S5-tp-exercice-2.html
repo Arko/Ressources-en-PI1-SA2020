@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>S5_2</title>
+	</head>
+	<body>
+		<p id="resultat"></p>
+		<button id="bouton">Cliquez</button>
+
+		<script>
+			const bouton = document.getElementById("bouton");
+			const monP = document.getElementById("resultat");
+
+			bouton.addEventListener("click", ajoutResultat);
+
+			function ajoutResultat() {
+				const valeurInitiale = Number(monP.innerHTML);
+				console.log(valeurInitiale);
+				if (valeurInitiale) {
+					const valeurFinale = valeurInitiale + 1;
+					monP.innerHTML = valeurFinale;
+				} else {
+					monP.innerHTML = 1;
+				}
+			}
+		</script>
+	</body>
+</html>
