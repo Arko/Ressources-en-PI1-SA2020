@@ -12,7 +12,8 @@
         // Récupérer les éléments HTML
         const monInput = document.querySelector('input');
         
-        // Ajouter un événement de clic sur le bouton
+        // Ajouter un événement input sur le champ de texte
+        // → A chaque entrée clavier, un événement sera lancé
         monInput.addEventListener('input', surChangement);
 
         // Fonction d'affichage d'un résultat
@@ -21,7 +22,7 @@
             p.innerHTML = r;
         }
 
-        // Code executé au clic sur le bouton
+        // Code executé à chaque changement
         function surChangement() {
             montrerRésultat(monInput.value.length);
         }
