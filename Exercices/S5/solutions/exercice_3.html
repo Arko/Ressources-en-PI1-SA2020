@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ex3</title>
+		<style>
+			div {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				border: 1px black solid;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="number" id="nombre" />
+		<button id="bouton">Valider</button>
+		<br />
+		<br />
+		<script>
+			const inputNombre = document.getElementById("nombre");
+			const bouton = document.getElementById("bouton");
+
+			bouton.addEventListener("click", creerGrille);
+
+			function creerGrille() {
+				const nombre = inputNombre.value;
+
+				if (nombre != "") {
+					for (let i = 1; i <= nombre; i++) {
+						for (let j = 1; j <= nombre; j++) {
+							const div = document.createElement("div");
+							div.innerHTML = "&nbsp;";
+							document.body.appendChild(div);
+						}
+						const br = document.createElement("br");
+						document.body.appendChild(br);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
