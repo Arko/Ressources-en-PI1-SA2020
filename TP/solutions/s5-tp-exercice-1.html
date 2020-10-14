@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <p>...</p>
+    <script>
+        // Récupérer les éléments HTML
+        const monInput = document.querySelector('input');
+        
+        // Ajouter un événement de clic sur le bouton
+        monInput.addEventListener('input', surChangement);
+
+        // Fonction d'affichage d'un résultat
+        function montrerRésultat(r) {
+            const p = document.querySelector('p');
+            p.innerHTML = r;
+        }
+
+        // Code executé au clic sur le bouton
+        function surChangement() {
+            montrerRésultat(monInput.value.length);
+        }
+    </script>
+</body>
+</html>
