@@ -41,9 +41,8 @@
 				}
 			}
 
-			function survol(event) {
-				const cible = event.target;
-				cible.style.backgroundColor = `hsl(${Math.ceil(
+			function survol() {
+				this.style.backgroundColor = `hsl(${Math.ceil(
 					Math.random() * 360
 				)}, 100%, 50%)`;
 			}
