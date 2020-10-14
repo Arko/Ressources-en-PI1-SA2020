@@ -30,6 +30,16 @@ Proposition pour réaliser l'exercice:
 
 [Solution](solutions/exercice_3.html)
 
+## Exercice 7
+
+7.1) Générez une grille de 5x5 divs.
+
+7.2) Attribuez une couleur par ligne.
+
+7.3) Même exercice, mais attribuez une couleur par colonne.
+
+[Solution](solutions/exercice_8.html)
+
 ## Exercice 4
 
 4.1) Créez une grille de divs de 40x20 (40 de long, 20 de haut).
@@ -55,9 +65,3 @@ Sur la base de l'exercice 3 (générer une grille carrée en fonction de la vale
 6.2) Attribuez une couleur aléatoire lors du survol.
 
 [Solution](solutions/exercice_6.html)
-
-## Exercice 7
-
-Créez un programme pour réaliser un dégradé de couleurs (comme [ceci](https://zupimages.net/up/18/48/q3ks.png)).
-
-[Solution](solutions/exercice_7.html)

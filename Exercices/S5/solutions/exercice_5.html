@@ -3,20 +3,31 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ex5</title>
-		<style>
-			div {
-				width: 100%;
-				height: 20px;
-			}
-		</style>
+		<title>Ex4</title>
 	</head>
 	<body>
 		<script>
-			for (let i = 0; i <= 360; i += 5) {
-				let box = document.createElement("div");
-				box.style.cssText = `background-color:hsl(${i}, 100%, 50%);`;
-				document.body.appendChild(box);
+			for (let i = 1; i <= 20; i++) {
+				for (let j = 1; j <= 40; j++) {
+					const div = document.createElement("div");
+					div.style.cssText = `
+            width: 25px;
+            height: 25px;
+            background-color: black;
+            display: inline-block;
+            margin: 1px;
+          `;
+					div.innerHTML = "&nbsp;";
+					div.addEventListener("click", surClic);
+					document.body.appendChild(div);
+				}
+				const br = document.createElement("br");
+				document.body.appendChild(br);
+			}
+
+			function surClic(event) {
+				const cible = event.target;
+				cible.style.backgroundColor = "gold";
 			}
 		</script>
 	</body>

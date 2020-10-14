@@ -3,20 +3,49 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ex7</title>
+		<title>Ex6</title>
 		<style>
 			div {
-				width: 100%;
+				width: 20px;
 				height: 20px;
+				display: inline-block;
+				border: 1px black solid;
 			}
 		</style>
 	</head>
 	<body>
+		<input type="number" id="nombre" />
+		<button id="bouton">Valider</button>
+		<br />
+		<br />
 		<script>
-			for (let i = 0; i <= 360; i += 5) {
-				let box = document.createElement("div");
-				box.style.cssText = "background-color:hsl(" + i + ",100%,50%);";
-				document.body.appendChild(box);
+			const inputNombre = document.getElementById("nombre");
+			const bouton = document.getElementById("bouton");
+
+			bouton.addEventListener("click", creerGrille);
+
+			function creerGrille() {
+				const nombre = inputNombre.value;
+
+				if (nombre != "") {
+					for (let i = 1; i <= nombre; i++) {
+						for (let j = 1; j <= nombre; j++) {
+							const div = document.createElement("div");
+							div.innerHTML = "&nbsp;";
+							div.addEventListener("mouseover", survol);
+							document.body.appendChild(div);
+						}
+						const br = document.createElement("br");
+						document.body.appendChild(br);
+					}
+				}
+			}
+
+			function survol(event) {
+				const cible = event.target;
+				cible.style.backgroundColor = `hsl(${Math.ceil(
+					Math.random() * 360
+				)}, 100%, 50%)`;
 			}
 		</script>
 	</body>

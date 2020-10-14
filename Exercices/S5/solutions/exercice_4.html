@@ -3,31 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ex4</title>
+		<title>Ex7</title>
+		<style>
+			div {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+				border: 1px black solid;
+			}
+		</style>
 	</head>
 	<body>
 		<script>
-			for (let i = 1; i <= 20; i++) {
-				for (let j = 1; j <= 40; j++) {
+			for (let i = 0; i < 5; i++) {
+				for (let j = 0; j < 5; j++) {
 					const div = document.createElement("div");
-					div.style.cssText = `
-            width: 25px;
-            height: 25px;
-            background-color: black;
-            display: inline-block;
-            margin: 1px;
-          `;
 					div.innerHTML = "&nbsp;";
-					div.addEventListener("click", surClic);
+
+					// Colorer les lignes
+					div.style.backgroundColor = `hsl(${i * 60}, 100%, 50%)`;
+					// Colorer les colonnes
+					// div.style.backgroundColor = `hsl(${j * 60}, 100%, 50%)`;
+
 					document.body.appendChild(div);
 				}
 				const br = document.createElement("br");
 				document.body.appendChild(br);
-			}
-
-			function surClic(event) {
-				const cible = event.target;
-				cible.style.backgroundColor = "gold";
 			}
 		</script>
 	</body>
