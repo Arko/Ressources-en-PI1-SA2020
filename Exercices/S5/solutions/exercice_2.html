@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex2</title>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let texte = "Dans ce test de la vue les mots deviennent plus petits";
+
+    let texteTableau = texte.split(" ");
+
+    for (let i = 0; i < texteTableau.length; i++) {
+      let result = document.createElement("div")
+      result.style.fontSize = `${10 / (i + 1)}em`;
+      result.innerHTML = texteTableau[i];
+      document.body.appendChild(result);
+    }
+  </script>
+</body>
+</html>
