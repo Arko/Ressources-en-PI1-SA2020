@@ -4,6 +4,11 @@
 
 Créez un code qui permette d'obtenir [ce résultat](https://zupimages.net/up/18/46/c10j.png).
 
+Conseils :
+
+- Créez un span par chiffre
+- L'attribut CSS qui permet de modifier la taille d'un texte est [font-size](https://developer.mozilla.org/fr/docs/Web/CSS/font-size)
+
 [Solution](solutions/exercice_1.html)
 
 ## Exercice 2
@@ -53,6 +58,11 @@ Proposition pour réaliser l'exercice:
 ## Exercice 6
 
 Créez un programme pour réaliser un dégradé de couleurs (comme [ceci](https://zupimages.net/up/18/48/q3ks.png)).
+
+Conseils :
+
+- Créez une div vide par couleur
+- Essayer d'attribuer les couleurs automatiquement avec le mode de couleur [hsl](https://www.w3schools.com/css/css_colors_hsl.asp)
 
 [Solution](solutions/exercice_6.html)
 
