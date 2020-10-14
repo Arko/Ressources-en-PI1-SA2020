@@ -6,24 +6,30 @@
 		<title>S5_2</title>
 	</head>
 	<body>
-		<p id="resultat"></p>
 		<button id="bouton">Cliquez</button>
+		<p id="resultat"></p>
 
 		<script>
+			// Déclarer les contance
 			const bouton = document.getElementById("bouton");
 			const monP = document.getElementById("resultat");
 
+			// Ajouter l'événement "click"
 			bouton.addEventListener("click", ajoutResultat);
 
 			function ajoutResultat() {
+				// Récupérer le contenu
 				const valeurInitiale = Number(monP.innerHTML);
-				console.log(valeurInitiale);
+
 				if (valeurInitiale) {
 					const valeurFinale = valeurInitiale + 1;
 					monP.innerHTML = valeurFinale;
 				} else {
 					monP.innerHTML = 1;
 				}
+
+				// Pour le fun, version ES6 :
+				// monP.innerHTML = valeurInitiale ? valeurInitiale + 1 : 1;
 			}
 		</script>
 	</body>
