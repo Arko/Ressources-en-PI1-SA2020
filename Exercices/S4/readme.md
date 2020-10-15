@@ -1,5 +1,7 @@
 # Série d'exercices S4
 
+→ Si vous n'utilisez pas GitHub Desktop, téléchargez cette série d'exercice [ici](https://cw.unil.ch/pi1/S4.zip).
+
 ## Exercice 1
 
 Lire et comprendre:

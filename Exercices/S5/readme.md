@@ -1,5 +1,7 @@
 # Série 5
 
+→ Si vous n'utilisez pas GitHub Desktop, téléchargez cette série d'exercice [ici](https://cw.unil.ch/pi1/S5.zip).
+
 ## Exercice 1
 
 Créez un code qui permette d'obtenir [ce résultat](https://zupimages.net/up/18/46/c10j.png).
