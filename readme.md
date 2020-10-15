@@ -78,3 +78,12 @@ Extensions recommandées pour VS Code:
 ## Journal des séances
 
 → Consultez le fichier [journal.md](journal.md) pour accéder aux ressources et liens évoqués durant chaque séance.
+
+
+## Travail sur les exercices
+
+Nous vous recommandons de travailler sur vos exercices *exclusivement* dans les dossiers `travail-personnel` se trouvant dans chaque dossier d'exercices de la semaine.
+
+Pour éviter de devoir gérer d'éventuels conflits de synchronisation avec GitHub, veuillez ne pas créer ou modifier de fichiers en dehors de ces dossiers `travail-personnel` dont le contenu est ignoré par le fichier `.gitignore` s'y trouvant.
+
+Si une donnée d'exercice est proposée sous forme de fichier, veuillez copier ce fichier dans le dossier `travail-personnel` avant toute modification.
