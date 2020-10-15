@@ -66,7 +66,7 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 ## S4: 7.10.20
 
 ### Série d'exercices
-- [S4 - readme.md](Exercices/S4/readme.md) ([.zip](https://cw.unil.ch/pi1/S4.zip))
+- [S4 - readme.md](Exercices/S4/readme.md) (⤓[.zip](https://cw.unil.ch/pi1/S4.zip))
 
 ### Live coding
 - [Intro](Live%20coding/s4-intro.html)
@@ -80,4 +80,4 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 ## S5: 14.10.20
 
 ### Série d'exercices
-- [S5 - readme.md](Exercices/S5/readme.md) ([.zip](https://cw.unil.ch/pi1/S5.zip))
+- [S5 - readme.md](Exercices/S5/readme.md) (⤓[.zip](https://cw.unil.ch/pi1/S5.zip))
