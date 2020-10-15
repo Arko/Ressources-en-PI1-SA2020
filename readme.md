@@ -74,6 +74,8 @@ Extensions recommandées pour VS Code:
 - [Créer un projet avec VS Code - Partie 2 - Ajouter CSS et JavaScript](https://rec.unil.ch/videos/creer-un-projet-avec-vs-code-partie-2-ajouter-css-et-javascript/)
 - [Créer un projet avec VS Code - Partie 3 - Lier des fichiers CSS et JavaScript](https://rec.unil.ch/videos/creer-un-projet-avec-vs-code-partie-3-lier-des-fichiers-css-et-javascript/)
 
+- [Utiliser GitHub Desktop pour maintenir à jour votre copie des ressources en PI1](https://rec.unil.ch/videos/utiliser-github-desktop-pour-maintenir-a-jour-votre-copie-des-ressources-en-pi1/)
+
 
 ## Journal des séances
 
