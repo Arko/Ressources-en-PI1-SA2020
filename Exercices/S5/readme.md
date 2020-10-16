@@ -33,7 +33,7 @@ Proposition pour réaliser l'exercice:
 
 3.2) Lorsque l'utilisateur appuie sur le bouton, si une valeur est entrée dans l'input, créez une grille de divs carrée qui a autant de lignes et de colonnes que la valeur entrée dans l'input.
 
-3.3) Donnez un style approprié aux divs pour qu'elles apparaissent comme des divs.
+3.3) Donnez un style approprié aux divs pour qu'elles apparaissent comme des boîtes.
 
 [Solution](solutions/exercice_3.html)
 
@@ -74,6 +74,6 @@ Sur la base de l'exercice 3 (générer une grille carrée en fonction de la vale
 
 7.1) ...changez la couleur de fond des divs lorsqu'on les survole.
 
-7.2) Attribuez une couleur aléatoire lors du survol (pour l'aléatoire : [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random).
+7.2) Attribuez une couleur aléatoire lors du survol (pour l'aléatoire : [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)).
 
 [Solution](solutions/exercice_7.html)
