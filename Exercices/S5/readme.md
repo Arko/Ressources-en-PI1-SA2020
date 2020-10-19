@@ -53,7 +53,7 @@ Proposition pour réaliser l'exercice:
 
 5.2) Donnez un style aux divs (largeur, hauteur, couleur de fond, display, etc...).
 
-5.3) Ajoutez une interaction : chaque fois que l'on clique sur une div, on change sa couleur (de votre choix, ou vous pouvez aussi utiliser [hsl](https://www.w3schools.com/css/css_colors_hsl.asp)).
+5.3) Ajoutez une interaction : chaque fois que l'on clique sur une div, on change sa couleur (de votre choix).
 
 [Solution](solutions/exercice_5.html)
 
