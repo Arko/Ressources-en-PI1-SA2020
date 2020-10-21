@@ -72,3 +72,9 @@ Sur la base du tableau `impairs` obtenu dans l'exercice 1...
 5. Écrivez les proportions sur la page.
 
 [Solution](solution/exercice7.html)
+
+## Exercice 8
+
+Même exercice que le 7, mais à réaliser avec un tableau à deux dimensions. Dans l'idée, on aurait quelque chose comme ça : `[tirage1, tirage0]`.
+
+[Solution](solution/exercice8.html)
