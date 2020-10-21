@@ -4,7 +4,7 @@
 
 1. Créez deux tableaux vides : `pairs` et `impairs`.
 2. Créez une boucle qui va de 1 à 100.
-3. À chaque tour de la boucle, ajouter le chiffre au tableau qui lui correspond : les chiffres pairs dans le tableau `pairs`, les impairs dans `impairs`.
+3. À chaque tour de la boucle, ajouter le chiffre au tableau qui lui correspond : les chiffres pairs dans le tableau `pairs`, les impairs dans `impairs`. Indices : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push).
 
 [Solution](solution/exercice1.html)
 
@@ -13,7 +13,7 @@
 Sur la base du tableau `impairs` obtenu dans l'exercice 1...
 
 1. Créez un nouveau tableau : `parTrois`.
-2. À l'aide d'une boucle, itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3.
+2. À l'aide d'une boucle, itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3. Indices : [modulo (%)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques)
 
 [Solution](solution/exercice2.html)
 
@@ -21,7 +21,7 @@ Sur la base du tableau `impairs` obtenu dans l'exercice 1...
 
 1. Créez une boucle qui va de 1 à 100.
 2. Créez un `<div>` par nombre.
-3. Attribuez une couleur de fond à chaque `<div>` :
+3. Attribuez une couleur de fond à chaque `<div>` (`div.style.backgroundColor = ...`) :
    - Si le nombre est pair, mettez la couleur de fond en vert.
    - Si le nombre est impair, mettez la couleur de fond en bleu.
    - Si le nombre est divisible par 3, mettez la couleur de fond en turquoise (entre bleu et vert).
