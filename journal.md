@@ -81,3 +81,15 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 
 ### Série d'exercices
 - [S5 - readme.md](Exercices/S5/readme.md) (⤓[.zip](https://cw.unil.ch/pi1/S5.zip))
+
+
+## S6: 21.10.20
+
+### Slides
+- [Tableaux](https://moodle.unil.ch/pluginfile.php/1783647/mod_resource/content/1/Slides-S6.pdf)
+
+### TP sur les tableaux
+- [s6-execices-tableaux.js](TP/solutions/s6-execices-tableaux.js)
+
+### Série d'exercices
+- [S6 - readme.md](Exercices/S6/readme.md)
