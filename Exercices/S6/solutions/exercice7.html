@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex7</title>
+  </head>
+  <body>
+    <script>
+      // 7.1
+      function aleatoire1Ou0() {
+        return Math.round(Math.random());
+      }
+
+      // 7.2
+      const tirage1 = [];
+      const tirage0 = [];
+
+      // 7.3
+      for (let i = 1; i <= 1000; i++) {
+        const nombre = aleatoire1Ou0();
+        if (nombre == 1) {
+          tirage1.push(nombre);
+        } else {
+          tirage0.push(nombre);
+        }
+      }
+
+      // 7.4
+      const totalTirage1 = tirage1.length;
+      const totalTirage0 = tirage0.length;
+      const totalite = totalTirage1 + totalTirage0;
+      const proportion1 = (totalTirage1 / totalite) * 100;
+      const proportion0 = (totalTirage0 / totalite) * 100;
+
+      // 7.5
+      const span = document.createElement('span');
+      span.innerHTML = `Proportion de 1 : ${proportion1}%. <br/> Proportion de 0 : ${proportion0}%.`;
+      document.body.appendChild(span);
+    </script>
+  </body>
+</html>
