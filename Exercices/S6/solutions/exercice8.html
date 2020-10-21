@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex8</title>
+  </head>
+  <body>
+    <script>
+      // 8.1
+      function aleatoire1Ou0() {
+        return Math.round(Math.random());
+      }
+
+      // 8.2
+      const tirages = [[], []];
+
+      // 8.3
+      for (let i = 1; i <= 1000; i++) {
+        const nombre = aleatoire1Ou0();
+        if (nombre == 1) {
+          tirages[nombre].push(nombre);
+        } else {
+          tirages[nombre].push(nombre);
+        }
+      }
+
+      // 8.4
+      const totalite = tirages[0].concat(tirages[1]).length;
+      const proportion1 = (tirages[1].length / totalite) * 100;
+      const proportion0 = (tirages[0].length / totalite) * 100;
+
+      // 8.5
+      const span = document.createElement('span');
+      span.innerHTML = `Proportion de 1 : ${proportion1}%. <br/> Proportion de 0 : ${proportion0}%.`;
+      document.body.appendChild(span);
+    </script>
+  </body>
+</html>

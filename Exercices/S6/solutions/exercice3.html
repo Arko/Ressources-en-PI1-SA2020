@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex3</title>
+    <style>
+      div {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        border: 1px black solid;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 3.1
+      for (let i = 1; i <= 100; i++) {
+        // 3.2
+        const div = document.createElement('div');
+        div.innerHTML = i;
+
+        // Divs divisibles par 3
+        if (i % 3 == 0) {
+          div.style.backgroundColor = 'turquoise';
+        }
+        // Divs pairs ou impairs
+        else if (i % 2 == 0) {
+          div.style.backgroundColor = 'chartreuse';
+        } else {
+          div.style.backgroundColor = 'dodgerBlue';
+        }
+        document.body.appendChild(div);
+
+        // BONUS - divs premiers
+        if (nombrePremier(i)) {
+          div.style.color = 'crimson';
+          div.style.border = '1px crimson solid';
+        }
+      }
+
+      // BONUS
+      function nombrePremier(nbr) {
+        for (let i = 2; i < nbr; i++) if (nbr % i === 0) return false;
+        return true;
+      }
+    </script>
+  </body>
+</html>

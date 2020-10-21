@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex6</title>
+  </head>
+  <body>
+    <script>
+      // 6.1
+      function aleatoire1A100() {
+        return Math.ceil(Math.random() * 100);
+      }
+
+      // 6.2
+      const nombres = [];
+      for (let i = 1; i <= 100; i++) nombres.push(aleatoire1A100());
+
+      // 6.3 - avec .reduce()
+      const totalReduce = nombres.reduce((total, nombre) => (total += nombre));
+
+      // 6.3 - avec une boucle
+      let totalBoucle = 0;
+      for (let i = 0; i < nombres.length; i++) totalBoucle += nombres[i];
+
+      // 6.3 - affichage
+      const span = document.createElement('span');
+      span.innerHTML = `Total : ${totalReduce}`; //ou totalBoucle, égal
+      document.body.appendChild(span);
+
+      // 6.4 (BONUS)
+      const tirages = [nombres];
+
+      function liste100Nombres() {
+        const liste100 = [];
+        for (let i = 1; i <= 100; i++) liste100.push(aleatoire1A100());
+        return liste100;
+      }
+
+      for (let i = 1; i <= 99; i++) tirages.push(liste100Nombres());
+      const totaux = tirages.map((tirage) => tirage.reduce((t, n) => (t += n)));
+      const moyenne = totaux.reduce((t, n) => (t += n)) / tirages.length;
+
+      const br = document.createElement('br');
+      document.body.appendChild(br);
+
+      const spanMoyenne = document.createElement('span');
+      spanMoyenne.innerHTML = `Moyenne sur 100 tirages : ${moyenne}`;
+      document.body.appendChild(spanMoyenne);
+    </script>
+  </body>
+</html>

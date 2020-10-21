@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex2</title>
+  </head>
+  <body>
+    <script>
+      /* Code l'exercice 1 */
+      const pairs = [];
+      const impairs = [];
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 == 0) {
+          pairs.push(i);
+        } else {
+          impairs.push(i);
+        }
+      }
+
+      // 2.1
+      const parTrois = [];
+
+      // 2.2 - méthode for
+      for (let i = 0; i < impairs.length; i++) {
+        if (impairs[i] % 3 == 0) {
+          parTrois.push(impairs[i]);
+        }
+      }
+
+      // 2.2 - méthode .forEach()
+      const parTroisForEach = [];
+
+      impairs.forEach((nombre) => {
+        if (nombre % 3 == 0) {
+          parTroisForEach.push(nombre);
+        }
+      });
+    </script>
+  </body>
+</html>
