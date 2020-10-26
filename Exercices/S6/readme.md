@@ -2,7 +2,7 @@
 
 ## Exercice 1
 
-1. Créez deux tableaux vides : `pairs` et `impairs`.
+1. Créez deux tableaux ([Array](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array)) vides : `pairs` et `impairs`.
 2. Créez une boucle qui va de 1 à 100.
 3. À chaque tour de la boucle, ajouter le chiffre au tableau qui lui correspond : les chiffres pairs dans le tableau `pairs`, les impairs dans `impairs`. Indices : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push).
 
