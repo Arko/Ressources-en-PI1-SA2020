@@ -13,7 +13,7 @@
 Sur la base du tableau `impairs` obtenu dans l'exercice 1...
 
 1. Créez un nouveau tableau : `parTrois`.
-2. À l'aide d'une boucle, itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3. Indices : [modulo (%)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques)
+2. À l'aide d'une boucle ([for](https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript)), itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3. Indices : [modulo (%)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques)
 
 [Solution](solutions/exercice2.html)
 
