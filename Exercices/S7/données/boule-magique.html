@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #boule {
+            display: inline-block;
+            background-color: black;
+            border-radius: 5em;
+            text-align: center;
+            padding: 1.5em;
+        }
+        #boule span {
+            display: inline-block;
+            background-color: white;
+            border-radius: 2em;
+            width: 2em;
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <div id="boule">
+            <span>8</span>
+        </div>
+    </p>
+    <p>
+        <button>Demander une réponse</button>
+    </p>
+    <p id="reponse"></p>
+    <script>
+        const réponses = [
+            // Positif
+            'Clairement',
+            'Très probable',
+            'C\'est bien parti',
+
+            // Evasif
+            'Rien n\'est moins sûr',
+            'Essaye plus tard',
+            'C\'est ton destin',
+
+            // Négatif
+            'Faut pas rêver',
+            'Non',
+            'Impossible',
+        ];
+
+        const bouton = document.querySelector('button');
+        const pRéponse = document.querySelector('#reponse');
+
+        bouton.addEventListener('click', donnerRéponse);
+
+        function donnerRéponse() {
+            pRéponse.innerText = unElementAuHasard(réponses);
+        }
+
+        function unElementAuHasard(tableau) {
+            return tableau[Math.floor(Math.random() * tableau.length)];
+        }
+    </script>
+</body>
+</html>
