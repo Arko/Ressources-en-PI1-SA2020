@@ -41,21 +41,109 @@ Nombre aléatoire
 
 Ajouts et modifications sur la base de code existante: [pizza-mystere-base.html](données/pizza-mystere-base.html)
 
-- Lorsque que le jeu est gagné, changer la recette mystère automatiquement
-    - Indice: La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
-- Au lieu que cela soit fait automatiquement, ajoutez un bouton pour recommencer la partie avec une nouvelle recette mystère et effacez l'historique de la conversation.
-- Ajoutez trois boutons pour choisir la difficulté (facile = la recette mystère contient 2 garnitures, moyen: 3 garnitures, difficile: 4 garnitures).
-    - Indice: Utilisez une variable pour stocker le niveau de difficulté (le nombre d'ingrédient).
-    - Indice: Lorsque la difficulté est définie, la recette mystère doit être générée à nouveau
-    - Indice: Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en dur. Faut-il la remplacer par une variable ?
-- Ajoutez des réponses alternatives pour chaque conditions et affichez en une au hasard à chaque fois.
-- Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLesGarnitures()` afin que 6 garnitures seulement soient sélectionnées au hasard pour la partie en cours.
-    - Indice 1: Inspirez-vous de la fonction `créerPizzaMystère()`.
-    - Indice 2: Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
-- Avancé: Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplacez `Un client entre...` par `Monsieur Hulot entre...` p.ex.
-    - Indice 1: utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
-    - Indice 2: Pour obtenir un élément aléatoire dans le tableau `noms`: `noms[Math.floor(Math.random() * noms.length)]`.
-- Avancé: Transformez le tableau des garnitures en tableau à deux dimensions, chaque élément du premier tableau étant un tableau ayant deux valeurs: La première contient le nom de la garniture, la seconde contient une couleur de votre choix. Appliquez la couleur comme couleur de fond au span correspondant.
+Trois catégories d'exercices: Facile, Moyen, Avancé (Fx, Mx, Ax)
+
+
+### F1
+
+Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin de pouvoir continuer de jouer.
+
+<details>
+    <summary>Indice 1</summary>
+    Le test de condition "jeu gagné" existe déjà aux la ligne 170-172.
+    Que pouvez-vous faire ici pour renouveller la recette mystère ?
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+    La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
+</details>
+
+
+### M1
+
+Ajoutez un bouton pour commencer une nouvelle partie.
+
+Cela comprend:
+- Créer un bouton et son comportement.
+- Créer une nouvelle recette mystère.
+- Effacer l'historique de la conversation.
+
+
+### M2
+
+Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n'aime pas), ajouter des réponses alternatives et affichez en une au hasard lorsque le cas se présente.
+
+<details>
+    <summary>Indice 1</summary>
+    Utilisez un tableau pour lister les réponses alternative à chaque cas.
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+    Trois cas, trois tableaux
+</details>
+
+Comment retourner une valeur aléatoire d'un tableau ?
+Consultez l'aide dans la section relative en bas de page
+
+### M3
+
+Ajoutez trois boutons pour choisir la difficulté:
+- facile = la recette mystère contient 2 garnitures
+- moyen: 3 garnitures
+- difficile: 4 garnitures
+
+<details>
+    <summary>Indice 1</summary>
+    Utilisez une variable pour stocker le niveau de difficulté (le nombre d'ingrédient).
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+    Lorsque la difficulté est définie, la recette mystère doit être générée à nouveau.
+</details>
+
+<details>
+    <summary>Indice 3</summary>
+    Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en dur. Faut-il la remplacer par une variable ?
+</details>
+
+### A1
+
+Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLesGarnitures()` afin que 6 garnitures seulement soient sélectionnées au hasard pour la partie en cours.
+
+<details>
+    <summary>Indice 1</summary>
+    Inspirez-vous de la fonction `créerPizzaMystère()`.
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+    Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
+</details>
+
+### A2
+
+Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplacez `Un client entre...` par `Monsieur Hulot entre...` p.ex.
+
+<details>
+    <summary>Indice 1</summary>
+    Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
+</details>
+
+
+Comment retourner une valeur aléatoire d'un tableau ?
+Consultez l'aide dans la section relative en bas de page
+
+### A3
+
+Transformez le tableau des garnitures en tableau à deux dimensions, chaque élément du premier tableau étant un tableau ayant deux valeurs:
+- la première contient le nom de la garniture
+- la seconde contient une couleur de votre choix.
+
+Appliquez la couleur comme couleur de fond au span correspondant.
+
 
 ### Exercice bonus: Boule magique
 
@@ -68,3 +156,16 @@ En vous inspirant du jeu Pizza Mystère, reproduisez ceci:
 Lorsque l'on clique sur le bouton "Demander une réponse", un texte aléatoire apparaît en dessous (ici: "C'est bien parti").
 
 Solution: [boule-magique.html](solutions/boule-magique.html)
+
+## Aide
+
+<details>
+    <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
+    Utilisez Math.random() :
+    ```js
+    let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
+    ```
+    Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
+
+    Conseil: expérimentez dans la console de votre navigateur.
+</details>
