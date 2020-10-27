@@ -192,11 +192,24 @@ Consultez l'aide dans la section relative plus haut dans ce fichier.
 
 ### A3: Colorer les garnitures
 
-Transformez le tableau des garnitures en tableau à deux dimensions, chaque élément du premier tableau étant un tableau ayant deux valeurs:
+Transformez le tableau des garnitures en tableau à deux dimensions: chaque élément du premier tableau étant lui-même un tableau possédant deux valeurs:
 - la première contient le nom de la garniture
 - la seconde contient une couleur de votre choix.
 
-Appliquez la couleur comme couleur de fond au span correspondant.
+Appliquez la couleur comme couleur de fond au `<span>` correspondant.
+
+<details>
+    <summary>Indice</summary>
+Exemple de tableau à deux dimensions
+
+```javascript
+const garnitures = [
+    ['Jambon', 'lightcoral'],
+    ['Champignons', 'rosybrown'],
+    // ...
+];
+```
+</details>
 
 
 ### Exercice bonus: Boule magique
@@ -205,7 +218,7 @@ Maintenant que vous êtes familier avec la manipulation de tableaux et le tirage
 
 En vous inspirant du jeu Pizza Mystère, reproduisez ceci:
 
-![Boule magique](données/boule-magique.png)
+![Boule magique](données/boule-magique.png | width=72)
 
 Lorsque l'on clique sur le bouton "Demander une réponse", un texte aléatoire apparaît en dessous (ici: "C'est bien parti").
 
