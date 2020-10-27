@@ -44,7 +44,7 @@ Ajouts et modifications sur la base de code existante: [pizza-mystere-base.html]
 Trois catégories d'exercices: Facile, Moyen, Avancé (Fx, Mx, Ax)
 
 
-### F1
+### F1: Continuer le jeu avec nouvelle recette mystère
 
 Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin de pouvoir continuer de jouer.
 
@@ -60,7 +60,7 @@ Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin 
 </details>
 
 
-### M1
+### M1: Bouton commencer nouvelle partie
 
 Ajoutez un bouton pour commencer une nouvelle partie.
 
@@ -70,7 +70,7 @@ Cela comprend:
 - Effacer l'historique de la conversation.
 
 
-### M2
+### M2: Réponses alternatives du client
 
 Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n'aime pas), ajouter des réponses alternatives et affichez en une au hasard lorsque le cas se présente.
 
@@ -87,7 +87,7 @@ Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n
 Comment retourner une valeur aléatoire d'un tableau ?
 Consultez l'aide dans la section relative en bas de page
 
-### M3
+### M3: Choisir la difficulté du jeu
 
 Ajoutez trois boutons pour choisir la difficulté:
 - facile = la recette mystère contient 2 garnitures
@@ -109,7 +109,7 @@ Ajoutez trois boutons pour choisir la difficulté:
     Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en dur. Faut-il la remplacer par une variable ?
 </details>
 
-### A1
+### A1: Plus de garnitures, moins de choix
 
 Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLesGarnitures()` afin que 6 garnitures seulement soient sélectionnées au hasard pour la partie en cours.
 
@@ -123,7 +123,7 @@ Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLe
     Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
 </details>
 
-### A2
+### A2: Nom du client aléatoire
 
 Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplacez `Un client entre...` par `Monsieur Hulot entre...` p.ex.
 
@@ -136,7 +136,7 @@ Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplac
 Comment retourner une valeur aléatoire d'un tableau ?
 Consultez l'aide dans la section relative en bas de page
 
-### A3
+### A3: Colorer les garnitures
 
 Transformez le tableau des garnitures en tableau à deux dimensions, chaque élément du premier tableau étant un tableau ayant deux valeurs:
 - la première contient le nom de la garniture
