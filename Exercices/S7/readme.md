@@ -161,11 +161,14 @@ Solution: [boule-magique.html](solutions/boule-magique.html)
 
 <details>
     <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
-    Utilisez Math.random() :
-    ```js
-    let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
-    ```
-    Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
 
-    Conseil: expérimentez dans la console de votre navigateur.
+Utilisez Math.random() :
+
+```javascript
+let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
+```
+
+Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
+
+Conseil: expérimentez dans la console de votre navigateur.
 </details>
