@@ -1,12 +1,13 @@
 # S7 – Jeu: Pizza Mystère
 
-But: Coder ensemble un mini-jeu de Pizzeria avec un client indécis.
+Objectif: Découvrir et augmenter ensemble un mini-jeu de Pizzeria avec un client indécis.
 
-La base de code est étudiée en cours, elle sert de support aux exercices
+La base de code est étudiée en cours, elle sert de support aux exercices.
 
 ## Résumé
 
-Un jeu dans lequel le joueur incarne un pizzaïolo. Celui doit deviner la bonne recette de pizza pour un client indécis et peu communicatif.
+Un jeu dans lequel le joueur incarne un pizzaïolo.
+Celui doit deviner la bonne recette de pizza pour un client indécis et peu communicatif.
 
 Le jeu est gagné dès que le client est satisfait.
 
@@ -14,7 +15,8 @@ Le jeu est gagné dès que le client est satisfait.
 
 1. Un client se présente et demande une pizza
 2. Le joueur choisi plusieurs garnitures parmi un choix prédéfini
-3. Il propose cette pizza au client qui réagi positivement ou négativement en fonction de la recette proposée. Seulement trois types de réponses sont possibles:
+3. Il propose cette pizza au client qui réagi positivement ou négativement en fonction de la recette proposée.
+Seulement trois types de réponses sont possibles:
     1. Trop ou pas assez d'ingrédients
     2. Le client n'aime pas un des ingrédients proposés
     3. C'est la bonne pizza, le client est content ! (fin de la partie)
@@ -25,7 +27,7 @@ Le jeu est gagné dès que le client est satisfait.
 2. Mise en place (des éléments, fonctions et événements)
 3. Interaction (avec l'utilisateur)
 
-## Documentation 
+## Documentation
 
 Méthodes de tableau utilisées
 - [.sort()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort)
@@ -37,11 +39,32 @@ Méthodes de tableau utilisées
 Nombre aléatoire
 - [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)
 
+
+## Aide
+
+<details>
+    <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
+
+Utilisez `Math.random()` :
+
+```javascript
+let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
+```
+
+Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). 
+Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
+
+Conseil: expérimentez dans la console de votre navigateur.
+</details>
+
+
 ## Exercices
 
-Ajouts et modifications sur la base de code existante: [pizza-mystere-base.html](données/pizza-mystere-base.html)
+En guise d'exercices, nous vous proposons de réaliser des ajouts et modifications sur la base de code existante: [pizza-mystere-base.html](données/pizza-mystere-base.html)
 
-Trois catégories d'exercices: Facile, Moyen, Avancé (Fx, Mx, Ax)
+Copiez ce fichier dans le dossier `travail-personnel` afin de conserver l'original et ne pas risquer de conflits avec GitHub.
+
+Trois catégories d'exercices: *Facile*, *Moyen*, *Avancé* (*F*x, *M*x, *A*x)
 
 
 ### F1: Continuer le jeu avec nouvelle recette mystère
@@ -90,7 +113,7 @@ Trois cas, trois tableaux
 </details>
 
 Comment retourner une valeur aléatoire d'un tableau ?
-Consultez l'aide dans la section relative en bas de page
+Consultez l'aide dans la section relative plus haut dans ce fichier.
 
 ### M3: Choisir la difficulté du jeu
 
@@ -144,9 +167,8 @@ Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplac
 Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
 </details>
 
-
 Comment retourner une valeur aléatoire d'un tableau ?
-Consultez l'aide dans la section relative en bas de page
+Consultez l'aide dans la section relative plus haut dans ce fichier.
 
 ### A3: Colorer les garnitures
 
@@ -168,20 +190,3 @@ En vous inspirant du jeu Pizza Mystère, reproduisez ceci:
 Lorsque l'on clique sur le bouton "Demander une réponse", un texte aléatoire apparaît en dessous (ici: "C'est bien parti").
 
 Solution: [boule-magique.html](solutions/boule-magique.html)
-
-## Aide
-
-<details>
-    <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
-
-Utilisez `Math.random()` :
-
-```javascript
-let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
-```
-
-Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). 
-Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
-
-Conseil: expérimentez dans la console de votre navigateur.
-</details>
