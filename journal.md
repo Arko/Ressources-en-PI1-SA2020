@@ -97,7 +97,7 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 
 ## S7: 28.10.20
 
-Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/JSCheatSheet.jpg)
+Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/CheatSheetJS.jpg)
 
 ### Documentation
 
