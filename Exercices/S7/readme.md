@@ -218,7 +218,7 @@ Maintenant que vous êtes familier avec la manipulation de tableaux et le tirage
 
 En vous inspirant du jeu Pizza Mystère, reproduisez ceci:
 
-<img src="données/boule-magique.png" width="72">
+<img src="données/boule-magique.png" width="144">
 
 Lorsque l'on clique sur le bouton "Demander une réponse", un texte aléatoire apparaît en dessous (ici: "C'est bien parti").
 
