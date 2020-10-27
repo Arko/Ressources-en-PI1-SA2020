@@ -27,7 +27,7 @@ Le jeu est gagné dès que le client est satisfait.
 
 ## Documentation 
 
-Méthodes de tableau
+Méthodes de tableau utilisées
 - [.sort()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort)
 - [.slice()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice)
 - [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)
@@ -37,7 +37,9 @@ Méthodes de tableau
 Nombre aléatoire
 - [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)
 
-## Exercices: Ajouts et modifications sur cette base
+## Exercices
+
+Ajouts et modifications sur la base de code existante: [pizza-mystere-base.html](données/pizza-mystere-base.html)
 
 - Lorsque que le jeu est gagné, changer la recette mystère automatiquement
     - Indice: La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
@@ -54,3 +56,15 @@ Nombre aléatoire
     - Indice 1: utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
     - Indice 2: Pour obtenir un élément aléatoire dans le tableau `noms`: `noms[Math.floor(Math.random() * noms.length)]`.
 - Avancé: Transformez le tableau des garnitures en tableau à deux dimensions, chaque élément du premier tableau étant un tableau ayant deux valeurs: La première contient le nom de la garniture, la seconde contient une couleur de votre choix. Appliquez la couleur comme couleur de fond au span correspondant.
+
+### Exercice bonus: Boule magique
+
+Maintenant que vous êtes familier avec la manipulation de tableaux et le tirage de nombres au hasard, peut-être voulez-vous essayer de créer un autre jeu de toute pièce: Un boule magique !
+
+En vous inspirant du jeu Pizza Mystère, reproduisez ceci:
+
+![Boule magique](données/boule-magique.png)
+
+Lorsque l'on clique sur le bouton "Demander une réponse", un texte aléatoire apparaît en dessous (ici: "C'est bien parti").
+
+Solution: [boule-magique.html](solutions/boule-magique.html)
