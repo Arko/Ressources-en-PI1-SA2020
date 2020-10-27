@@ -46,7 +46,7 @@ La documentation des technologies et API web directement dans votre navigateur, 
 
 ### CheatSheet
 
-Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/JSCheatSheet.jpg)
+Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/CheatSheetJS.jpg)
 
 ## Outils de développement
 
