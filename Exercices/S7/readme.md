@@ -64,6 +64,8 @@ En guise d'exercices, nous vous proposons de réaliser des ajouts et modificatio
 
 Copiez ce fichier dans le dossier `travail-personnel` afin de conserver l'original et ne pas risquer de conflits avec GitHub.
 
+Libre à vous de choisir en fonction des exercices si vous partez du fichier original ou continuez sur le même fichier pour augmenter le jeu avec toutes les nouvelles fonctionnalités.
+
 Trois catégories d'exercices: *Facile*, *Moyen*, *Avancé* (*F*x, *M*x, *A*x)
 
 
@@ -85,6 +87,20 @@ Que pouvez-vous faire ici pour renouveller la recette mystère ?
 La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
 </details>
 
+<details>
+    <summary>Solution</summary>
+
+Ajouter un simple appel à la fonction existante `créerPizzaMystère` dans la condition aux lignes 170-172.
+
+```javascript
+// Si pas de réponse jusqu'ici, c'est gagné !
+if (réponse == undefined) {
+    réponse = '😋 Oui, merci !';
+    créerPizzaMystère();
+}
+```
+</details>
+
 
 ### M1: Bouton commencer nouvelle partie
 
@@ -98,7 +114,7 @@ Cela comprend:
 
 ### M2: Réponses alternatives du client
 
-Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n'aime pas), ajouter des réponses alternatives et affichez en une au hasard lorsque le cas se présente.
+Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n'aime pas), ajouter des réponses alternatives et affichez-en une au hasard lorsque le cas se présente.
 
 <details>
     <summary>Indice 1</summary>
@@ -115,10 +131,11 @@ Trois cas, trois tableaux
 Comment retourner une valeur aléatoire d'un tableau ?
 Consultez l'aide dans la section relative plus haut dans ce fichier.
 
+
 ### M3: Choisir la difficulté du jeu
 
 Ajoutez trois boutons pour choisir la difficulté:
-- facile = la recette mystère contient 2 garnitures
+- facile: la recette mystère contient 2 garnitures
 - moyen: 3 garnitures
 - difficile: 4 garnitures
 
@@ -141,6 +158,7 @@ Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en du
 Faut-il la remplacer par une variable ?
 </details>
 
+
 ### A1: Plus de garnitures, moins de choix
 
 Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLesGarnitures()` afin que 6 garnitures seulement soient sélectionnées au hasard pour la partie en cours.
@@ -157,6 +175,7 @@ Inspirez-vous de la fonction `créerPizzaMystère()`.
 Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
 </details>
 
+
 ### A2: Nom du client aléatoire
 
 Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplacez `Un client entre...` par `Monsieur Hulot entre...` p.ex.
@@ -169,6 +188,7 @@ Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait
 
 Comment retourner une valeur aléatoire d'un tableau ?
 Consultez l'aide dans la section relative plus haut dans ce fichier.
+
 
 ### A3: Colorer les garnitures
 
