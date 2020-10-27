@@ -110,7 +110,7 @@ Lorsque le jeu est gagné, au lieu d'afficher un texte en regard de la propositi
 <details>
     <summary>Indice</summary>
 
-Consultez la documentation de [window.alert](https://developer.mozilla.org/fr/docs/Web/API/Window/alert)
+Consultez la documentation de [window.alert()](https://developer.mozilla.org/fr/docs/Web/API/Window/alert)
 </details>
 
 <details>
@@ -133,7 +133,7 @@ Ajoutez une condition de test lors de la proposition. Si la recette proposée ne
 <details>
     <summary>Indice 1</summary>
 
-Dans la fonction `proposerPizza`, inspirez-vous des conditions existantes et ajoutez-en une nouvelle
+Dans la fonction `proposerPizza`, inspirez-vous des conditions existantes et ajoutez-en une nouvelle.
 </details>
 
 <details>
