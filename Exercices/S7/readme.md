@@ -1,6 +1,6 @@
 # S7 – Jeu: Pizza Mystère
 
-Objectif: Découvrir et augmenter ensemble un mini-jeu de Pizzeria avec un client indécis.
+Objectif: Découvrir et augmenter ensemble un mini-jeu de pizzeria avec un client indécis.
 
 La base de code est étudiée en cours, elle sert de support aux exercices.
 
@@ -62,11 +62,13 @@ Conseil: expérimentez dans la console de votre navigateur.
 
 En guise d'exercices, nous vous proposons de réaliser des ajouts et modifications sur la base de code existante: [pizza-mystere-base.html](données/pizza-mystere-base.html)
 
-Copiez ce fichier dans le dossier `travail-personnel` afin de conserver l'original et ne pas risquer de conflits avec GitHub.
+Copiez ce fichier dans le dossier `travail-personnel` de la semaine afin de conserver l'original et ne pas risquer de conflits avec GitHub.
 
-Libre à vous de choisir en fonction des exercices si vous partez du fichier original ou continuez sur le même fichier pour augmenter le jeu avec toutes les nouvelles fonctionnalités.
+Libre à vous de choisir en fonction des exercices si vous partez du fichier original ou continuez sur le même fichier pour augmenter le jeu de manière incrémentale avec toutes les nouvelles fonctionnalités.
 
 Trois catégories d'exercices: *Facile*, *Moyen*, *Avancé* (*F*x, *M*x, *A*x)
+
+**Conseil**: Utilisez la console de votre naviguateur pour débugguer votre code et voir les éventuelles erreurs !
 
 
 ### F1: Continuer le jeu avec nouvelle recette mystère
@@ -76,7 +78,7 @@ Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin 
 <details>
     <summary>Indice 1</summary>
 
-Le test de condition "jeu gagné" existe déjà aux la ligne 170-172.
+Le test de condition "jeu gagné" existe déjà aux la ligne 168-170.
 
 Que pouvez-vous faire ici pour renouveller la recette mystère ?
 </details>
@@ -90,13 +92,64 @@ La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
 <details>
     <summary>Solution</summary>
 
-Ajouter un simple appel à la fonction existante `créerPizzaMystère` dans la condition aux lignes 170-172.
+Ajouter un simple appel à la fonction existante `créerPizzaMystère` dans la condition aux lignes 168-170.
 
 ```javascript
 // Si pas de réponse jusqu'ici, c'est gagné !
 if (réponse == undefined) {
     réponse = '😋 Oui, merci !';
     créerPizzaMystère();
+}
+```
+</details>
+
+### F2: Gagner avec plus d'impact
+
+Lorsque le jeu est gagné, au lieu d'afficher un texte en regard de la proposition, afficher une alerte du navigateur.
+
+<details>
+    <summary>Indice</summary>
+
+Consultez la documentation de [window.alert](https://developer.mozilla.org/fr/docs/Web/API/Window/alert)
+</details>
+
+<details>
+    <summary>Solution</summary>
+
+Remplacez la ligne 169 avec un appel à `alert()`
+
+```javascript
+// Si pas de réponse jusqu'ici, c'est gagné !
+if (réponse == undefined) {
+    alert('😋 Oui, merci !');
+}
+```
+</details>
+
+### F3:
+
+Ajoutez une condition de test lors de la proposition. Si la recette proposée ne contient que de la pâte à pizza, le client vous fait une remarque désobligeante.
+
+<details>
+    <summary>Indice 1</summary>
+
+Dans la fonction `proposerPizza`, inspirez-vous des conditions existantes et ajoutez-en une nouvelle
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+
+Pour cette condition, l'ordre dans lequel les conditions sont testées peut avoir son importance !
+</details>
+
+<details>
+    <summary>Solution</summary>
+
+Ajoutez, au moins après le premier test de condition (pas assez), une nouvelle condition qui teste si la longueur de la recette proposée est égale à zéro :
+
+```javascript
+if (recette.length == 0) {
+    réponse = '😕 Je ne vous ai pas demandé un apéritif !';
 }
 ```
 </details>
@@ -184,6 +237,12 @@ Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplac
     <summary>Indice 1</summary>
 
 Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+
+Peut-être devriez-vous ajouter un `<span>` avec `id` en début de phrase pour faciliter l'injection du nom du client ?
 </details>
 
 Comment retourner une valeur aléatoire d'un tableau ?
