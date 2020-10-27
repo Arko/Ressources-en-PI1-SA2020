@@ -93,3 +93,38 @@ Une vraie page blanche sur votre navigateur pour expérimenter avec la console? 
 
 ### Série d'exercices
 - [S6 - readme.md](Exercices/S6/readme.md)
+
+
+## S7: 28.10.20
+
+Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/JSCheatSheet.jpg)
+
+### Documentation
+
+Méthodes de tableau utilisées
+- [.sort()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort)
+- [.slice()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice)
+- [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)
+- [.join()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/join)
+- [.includes()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/includes)
+
+Nombre aléatoire
+- [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)
+
+<details>
+    <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
+
+Utilisez `Math.random()` :
+
+```javascript
+let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
+```
+
+Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). 
+Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
+
+Conseil: expérimentez dans la console de votre navigateur.
+</details>
+
+### Série d'exercices (Jeu Pizza Mystère)
+- [S7 - readme.md](Exercices/S7/readme.md)
