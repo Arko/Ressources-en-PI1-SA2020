@@ -150,20 +150,18 @@
                 réponse = '😕 C\'est un peu léger...';
             }
 
-            // Si trop, réponse négative
-            else if (recette.length > recetteMystère.length) {
-                réponse = '😒 Il y a trop de choses...';
-            }
-
             // Pour chaque garniture choisie,
-            else {
-                recette.forEach((garniture) => {
-                    // Tester si elle fait partie de la recette mystère
-                    if (! recetteMystère.includes(garniture)) {
-                        // Si non, réponse négative
-                        réponse = '😩 Il y a quelque chose que je n\'aime pas...';
-                    }
-                });
+            recette.forEach((garniture) => {
+                // Tester si elle fait partie de la recette mystère
+                if (! recetteMystère.includes(garniture)) {
+                    // Si non, réponse négative
+                    réponse = '😩 Il y a quelque chose que je n\'aime pas...';
+                }
+            });
+
+            // Si trop, réponse négative
+            if (recette.length > recetteMystère.length) {
+                réponse = '😒 Il y a trop de choses...';
             }
 
             // Si pas de réponse jusqu'ici, c'est gagné !
