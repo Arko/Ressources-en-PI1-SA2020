@@ -126,7 +126,7 @@ if (réponse == undefined) {
 ```
 </details>
 
-### F3:
+### F3: Un repas léger
 
 Ajoutez une condition de test lors de la proposition. Si la recette proposée ne contient que de la pâte à pizza, le client vous fait une remarque désobligeante.
 
