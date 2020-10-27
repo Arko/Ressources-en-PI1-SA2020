@@ -25,6 +25,18 @@ Le jeu est gagné dès que le client est satisfait.
 2. Mise en place (des éléments, fonctions et événements)
 3. Interaction (avec l'utilisateur)
 
+## Documentation 
+
+Méthodes de tableau
+- [.sort()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/sort)
+- [.slice()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice)
+- [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)
+- [.join()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/join)
+- [.includes()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/includes)
+
+Nombre aléatoire
+- [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)
+
 ## Exercices: Ajouts et modifications sur cette base
 
 - Lorsque que le jeu est gagné, changer la recette mystère automatiquement
