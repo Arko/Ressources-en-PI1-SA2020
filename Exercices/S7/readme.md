@@ -50,13 +50,16 @@ Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin 
 
 <details>
     <summary>Indice 1</summary>
-    Le test de condition "jeu gagné" existe déjà aux la ligne 170-172.
-    Que pouvez-vous faire ici pour renouveller la recette mystère ?
+
+Le test de condition "jeu gagné" existe déjà aux la ligne 170-172.
+
+Que pouvez-vous faire ici pour renouveller la recette mystère ?
 </details>
 
 <details>
     <summary>Indice 2</summary>
-    La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
+
+La fonction `créerPizzaMystère` peut être appelée plus d'une fois...
 </details>
 
 
@@ -76,12 +79,14 @@ Pour chaque condition de réponse du client (trop d'ingrédients / pas assez / n
 
 <details>
     <summary>Indice 1</summary>
-    Utilisez un tableau pour lister les réponses alternative à chaque cas.
+
+Utilisez un tableau pour lister les réponses alternative à chaque cas.
 </details>
 
 <details>
     <summary>Indice 2</summary>
-    Trois cas, trois tableaux
+
+Trois cas, trois tableaux
 </details>
 
 Comment retourner une valeur aléatoire d'un tableau ?
@@ -96,17 +101,21 @@ Ajoutez trois boutons pour choisir la difficulté:
 
 <details>
     <summary>Indice 1</summary>
-    Utilisez une variable pour stocker le niveau de difficulté (le nombre d'ingrédient).
+
+Utilisez une variable pour stocker le niveau de difficulté (le nombre d'ingrédient).
 </details>
 
 <details>
     <summary>Indice 2</summary>
-    Lorsque la difficulté est définie, la recette mystère doit être générée à nouveau.
+
+Lorsque la difficulté est définie, la recette mystère doit être générée à nouveau.
 </details>
 
 <details>
     <summary>Indice 3</summary>
-    Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en dur. Faut-il la remplacer par une variable ?
+
+Dans la fonction `créerPizzaMystère` la difficulté actuelle est écrite en dur.
+Faut-il la remplacer par une variable ?
 </details>
 
 ### A1: Plus de garnitures, moins de choix
@@ -115,12 +124,14 @@ Ajoutez plus de garnitures au tableau idoine et modifiez la fonction `afficherLe
 
 <details>
     <summary>Indice 1</summary>
-    Inspirez-vous de la fonction `créerPizzaMystère()`.
+
+Inspirez-vous de la fonction `créerPizzaMystère()`.
 </details>
 
 <details>
     <summary>Indice 2</summary>
-    Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
+
+Renommer le tableau original `garnitures` afin de pouvoir réutiliser cet identifiant pour stocker les 6 garnitures au hasard dans `afficherLesGarnitures`.
 </details>
 
 ### A2: Nom du client aléatoire
@@ -129,7 +140,8 @@ Au début de chaque nouvelle partie, donnez un nom aléatoire au client. Remplac
 
 <details>
     <summary>Indice 1</summary>
-    Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
+
+Utilisez un tableau pour lister les noms que vous créez comme nous l'avons fait avec les garnitures.
 </details>
 
 
@@ -162,13 +174,14 @@ Solution: [boule-magique.html](solutions/boule-magique.html)
 <details>
     <summary>Comment retourner une valeur aléatoire d'un tableau ?</summary>
 
-Utilisez Math.random() :
+Utilisez `Math.random()` :
 
 ```javascript
 let valeurAuHasard = monTableau[Math.floor(Math.random() * monTableau.length)];
 ```
 
-Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
+Math.random() retourne une valeur à virgule flottante entre 0 et 1 (sans jamais retourner exactement 1). 
+Il suffit de multiplier cette valeur par la longueur du tableau et d'arrondir le tout à la valeur inférieure.
 
 Conseil: expérimentez dans la console de votre navigateur.
 </details>
