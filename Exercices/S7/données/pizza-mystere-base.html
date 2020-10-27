@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            background-color: lightgreen;
+            border-radius: 1em;
+            padding: 0.25em 0.5em;
+            margin: 0.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pizza Mystère</h1>
+
+    <p>
+        Un client entre dans votre pizzeria et vous demande une pizza.<br>
+        Mais il ne sait pas ce qu'il souhaite...
+    </p>
+
+    <p>A vous de lui proposer une composition !</p>
+
+    <h2>Garnitures</h2>
+    <p id="garnitures"></p> <!-- NOTE: Commencer avec quelques spans html pour faire les styles -->
+
+    <h2>Recette</h2>
+    <p id="recette">...</p>
+
+    <button>Proposer la pizza</button>
+
+    <p id="reponse"></p>
+
+    <script>
+
+        //// Initialisation ///////////////////////////////////////////////////
+        //  1. Initialiser les données (garnitures)
+        //  2. Initialiser les variables
+        //  3. Initialiser les références (constantes) aux éléments HTML
+
+        // Tableau (Array) contenant les garnitures
+        const garnitures = [
+            'Jambon',
+            'Champignons',
+            'Oignons',
+            'Poivrons',
+            'Chorizo',
+            'Olives',
+            'Saumon',
+        ];
+
+        // Déclarer un tableau vide qui contiendra notre recette
+        let recette = [];
+
+        // Déclarer un tableau vide qui contiendra la recette mystère
+        let recetteMystère = [];
+
+        // Récupérer les références aux éléments HTML que nous allons utiliser
+        const pGarnitures = document.querySelector('#garnitures');
+        const pRecette = document.querySelector('#recette');
+        const boutonProposer = document.querySelector('button');
+        const pRéponse = document.querySelector('#reponse');
+
+
+        //// Mise en place ////////////////////////////////////////////////////
+        //  1. Afficher les garnitures sous forme de boutons cliquables
+        //      Pour chaque garniture:
+        //          1.1 Créer un élément nommé d'après la garniture
+        //          1.2 Ajouter un événement de clic
+        //  2. Créer la recette de la pizza mystère
+        //  3. Ajouter un événement de clic sur le bouton "Proposer"
+
+        // Fonction permettant d'afficher les garnitures en tant que spans cliquables
+        function afficherLesGarnitures() {
+            // Pour chaque garniture,
+            garnitures.forEach((garniture) => {
+                // créer un span,
+                let span = document.createElement('span');
+
+                // le remplir,
+                span.innerText = garniture;
+
+                // et l'ajouter au <p> correspondant.
+                pGarnitures.appendChild(span);
+
+                // Ajouter un événement de clic tant qu'on y est
+                span.addEventListener('click', choisirGarniture)
+            });
+        }
+
+        // Fonction créant une recette mystère
+        //   Le but est de sélectionner 3 garnitures au hasard et
+        //   de stocker cette solution dans le tableau recetteMystère
+        function créerPizzaMystère() {
+            // Mélanger les garnitures avec .sort() qui renvoie une copie mélangée
+            const garnituresMélangées = garnitures.sort(() => 0.5 - Math.random());
+
+            // Isoler les 3 premières garnitures mélangées
+            recetteMystère = garnituresMélangées.slice(0, 3);
+
+            // Tricher: Montrer la pizza mystère dans la console
+            console.log("Pizza mystère:", recetteMystère)
+        }
+
+        // Afficher les garnitures disponibles sous forme de boutons cliquables
+        afficherLesGarnitures();
+
+        // Créer la recette de la pizza mystère
+        créerPizzaMystère();
+
+        // Ajouter un événement de clic sur le bouton "Proposer la pizza"
+        boutonProposer.addEventListener('click', proposerPizza)
+
+
+        //// Phase interactive ////////////////////////////////////////////////
+        //  Ces fonctions seront appelées par les événements de clic définis
+        //  plus haut dans le code avec .addEventListener()
+        //  1. Créer une fonction permettant de répondre au clic sur une
+        //     garniture et la choisir pour la recette à proposer
+        //  2. Créer une fonction permettant de répondre au clic sur le
+        //     bouton "Proposer la pizza"
+
+        // Fonction gérant le clic sur une garniture
+        function choisirGarniture() {
+            // Récupérer le nom de la garniture
+            const garniture = this.innerText;
+
+            // Observer dans la console
+            console.log("Ajouté:", garniture);
+
+            // Ajouter cette garniture à notre recette
+            recette.push(garniture);
+
+            // Ajouter la garniture au paragraphe de la recette
+            pRecette.innerText = recette.join(', ');
+        }
+
+        // Fonction gérant le clic sur le bouton "Proposer la pizza"
+        function proposerPizza() {
+            console.log("Notre proposition:", recette)
+
+            let réponse;
+
+            // Tester si on a assez de garnitures
+            // Si pas assez, réponse négative
+            if (recette.length < recetteMystère.length) {
+                réponse = '😕 C\'est un peu léger...';
+            }
+
+            // Pour chaque garniture choisie,
+            recette.forEach((garniture) => {
+                // Tester si elle fait partie de la recette mystère
+                if (! recetteMystère.includes(garniture)) {
+                    // Si non, réponse négative
+                    réponse = '😩 Il y a quelque chose que je n\'aime pas...';
+                }
+            });
+
+            // Si trop, réponse négative
+            if (recette.length > recetteMystère.length) {
+                réponse = '😒 Il y a trop de choses...';
+            }
+
+            // Si pas de réponse jusqu'ici, c'est gagné !
+            if (réponse == undefined) {
+                réponse = '😋 Oui, merci !';
+            }
+
+            // Afficher la réponse
+            pRéponse.innerText += `${recette.join(', ')} ? ${réponse} \n`;
+
+            // Remise à zéro de notre recette
+            recette = [];
+            pRecette.innerText = '...';
+        }
+
+    </script>
+</body>
+</html>

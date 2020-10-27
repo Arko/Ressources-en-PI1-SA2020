@@ -44,6 +44,9 @@ Autres points d'entrée du MDN:
 
 La documentation des technologies et API web directement dans votre navigateur, disponible également offline: https://devdocs.io/ (en anglais).
 
+### CheatSheet JS
+
+Un aide-mémoire rapide sur les éléments de language les plus couramment utilisés: [CheatSheetJS](Réference%20JavaScript/CheatSheetJS.jpg)
 
 ## Outils de développement
 
