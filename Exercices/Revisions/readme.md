@@ -175,3 +175,50 @@ Même exercice que le D4, mais un peu plus compliqué...
       - ... ait une couleur de fond (de votre choix, la solution propose du HSL mais vous être libre de mettre ce que vous voulez)
    4. Ajoutez `valeurInput` dans le HTML du div (rappel : `.innerHTML`).
    5. Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
+
+[Solution](./solutions/D5.html)
+
+## E - Boucles et tableaux
+
+### Exercice E1
+
+1. Créez une boucle qui va de 1 à 100.
+2. Affichez les chiffres de la boucle dans la console.
+
+### Exercice E2
+
+1. Créez un tableau `notes` avec les valeurs `5, 5.5, 5, 4, 6, 4.5`.
+2. A l'aide d'une boucle, itérez sur le tableau pour afficher ses valeurs dans la console. Pour rappel, on voudras faire aller la boucle de 0 jusqu'au numéro du dernier index du tableau (dans ce cas, on a 6 éléments donc le dernier index vaut 5 - `index 0 : 5`, `index 1 : 5.5`, `index 2 : 5`, `index 3 : 4`, `index 4 : 6`, `index 5 : 4.5`) ; on peut obtenir la longeur (le nombre d'éléments) du tableau avec [.length](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/length).
+
+### Exercice E3
+
+1. Créez un tableau `chiffres` vide.
+2. A l'aide d'une boucle qui va de 1 à 50, remplir `chiffres` avec les chiffres de la boucle (rappel : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)).
+
+### Exercice E4
+
+1. Créez un tableau `chiffres` vide.
+2. A l'aide d'une boucle qui va de 1 à 50, remplir `chiffres` avec des chiffres aléatoires entre 1 et 10 (`Math.ceil(Math.random() * 10)`).
+3. Vérifiez que la longueur du tableau vaut bien 50 (avec un `console.log()`).
+4. Créez un tableau `fois5` vide.
+5. A l'aide d'une boucle, itérez sur le tableau `chiffres`, multipliez chaque valeur par 5 et placez la dans le tableau `fois5`.
+6. Créez une variable `total` égale à `0`.
+7. A l'aide d'une boucle, itérez sur le tableau `fois5` et additionnez chaque valeur à total.
+8. Affichez `total` dans la console.
+
+### Exercice E5
+
+1. Créez une boucle qui va de 1 à 10.
+2. Créez une deuxième boucle (dans la première) qui va de 1 à 20.
+3. Dans cette deuxième boucle :
+   - Déclarez une variable `div` qui contient un nouvel élément `div` (`document.createElement()`).
+   - Déclarez une variable `nombreAleatoire` qui contient un nombre aléatoire entre 0 et 20 (`Math.floor(Math.random() * 21)`).
+   - Ajoutez du style à votre div (par exemple `div.style.color`) pour que le div...
+     - ... ait une largeur de 25px
+     - ... ait une hauteur de 25px
+     - ... ait un bordure noire, d'un pixel d'épaisseur, et solide
+     - ... aligne le texte contenu au centre
+     - ... ait une couleur de fond en fonction du nombre aléatoire (utiliser le [hsl](https://www.w3schools.com/css/css_colors_hsl.asp) comme on l'a vu dans l'exercice S5.6)
+   - Ajoutez un nombre aléatoire dans le HTML du `div` (`.innerHTML`).
+   - Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
+4. Dans la première boucle (après la deuxième boucle) créez un élément `br` et ajoutez-le à la page.
