@@ -105,7 +105,7 @@ if (réponse == undefined) {
 
 ### F2: Gagner avec plus d'impact
 
-Lorsque le jeu est gagné, au lieu d'afficher un texte en regard de la proposition, afficher une alerte du navigateur.
+Lorsque le jeu est gagné, en plus d'afficher un texte en regard de la proposition, afficher une alerte du navigateur.
 
 <details>
     <summary>Indice</summary>
@@ -116,12 +116,13 @@ Consultez la documentation de [window.alert()](https://developer.mozilla.org/fr/
 <details>
     <summary>Solution</summary>
 
-Remplacez la ligne 169 avec un appel à `alert()`
+Ajoutez après la ligne 169 avec un appel à `alert()`
 
 ```javascript
 // Si pas de réponse jusqu'ici, c'est gagné !
 if (réponse == undefined) {
-    alert('😋 Oui, merci !');
+    réponse = '😋 Oui, merci !';
+    alert('Félicitations, Vous avez gagné le jeu !');
 }
 ```
 </details>
