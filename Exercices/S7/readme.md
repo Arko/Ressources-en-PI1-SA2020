@@ -297,7 +297,7 @@ const garnituresChoisies = [];
 
 Une fois que l'on garde une trace des garnitures cliquées par l'utilisateur, vérifier, lors d'un clic sur une garniture, que la garniture cliquée n'est pas dans la liste de celles déjà cliquées.
 
-Modifiez la fonction `choisirGarniture()`.
+Modifiez la fonction `choisirGarniture()`. Essayez avec `.includes()`.
 </details>
 
 <details>
