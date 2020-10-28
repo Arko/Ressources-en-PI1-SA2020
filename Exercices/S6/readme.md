@@ -1,5 +1,13 @@
 # Série 6 - tableaux, boucles et conditions
 
+Fonctions et éléments utiles pour la série :
+* [Array - ce qu'on appelle "tableau"](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array)
+* [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)
+* [Boucles for()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/for)
+* [Itération avec .forEach()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach)
+* [.map()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map)
+* [.reduce()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce)
+
 ## Exercice 1
 
 1. Créez deux tableaux vides : `pairs` et `impairs`.
