@@ -34,4 +34,59 @@
 
 [Solution](./solutions/A2.html)
 
-## B - le DOM
+## B - les fonctions
+
+Rappel : [MDN - les fonctions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions)
+
+### Exercice B1
+
+Créez une fonction `helloWorld` qui, quand elle est appelée, affiche "Hello world" dans la console.
+
+### Exercice B2
+
+Créez une fonction `direBonjour` avec un argument (`nom`) qui, quand elle est appelée (`direBonjour("Loris")`), affiche "Bonjour Loris" dans la console.
+
+### Exercice B3
+
+Créez une fonction `somme` avec deux argument (`a` et `b`) qui, quand elle est appelée (`somme(2, 3)`), affiche le résultat de la somme des deux chiffres dans la console.
+
+### Exercice B4
+
+1. Créez une fonction `soustraction` avec deux argument (`a` et `b`) qui, quand elle est appelée (`soustraction(2, 3)`), _retourne_ le résultat de la soustraction du deuxième chiffre au premier.
+2. Déclarez une variable `resultat` égale au résultat de la soustraction de `10` et `5`.
+
+### Exercice B5
+
+1. Déclarez une variable `chiffre` égale à `6`.
+2. Créez une fonction `tourDeMagie` avec un argument (`n`) qui réalise tous les calculs proposés à l'exercice A2.1.
+3. Faites en sorte que `tourDeMagie` _retourne_ le résultat des calculs.
+4. Déclarez une nouvelle variable `resultat` égale au résultat de la fonction `tourDeMagie` appelée avec `chiffre` (`tourDeMagie(chiffre)`).
+5. Affichez `resultat` dans la console.
+
+## C - le DOM
+
+### Exercice C1
+
+Créez un ficher HTML qui contient les éléments suivants :
+
+- Un titre (`<h1>`) qui contient "Exercices DOM".
+- Un paragraphe vide.
+- Un input de type nombre (donnez lui un id, "nombre" par exemple).
+- Un bouton qui dise "cliquez".
+- un retour à la ligne.
+
+[Solution](./solutions/B1.html)
+
+### Exercice C2
+
+Sélectionnez le titre et changez le en "J'ai hacké le titre !"
+
+### Exercice C3
+
+Sélectionnez le paragraphe et écrivez "Entrez un nombre dans l'input et cliquez pour une surprise..." dans son HTML.
+
+### Exercice C4
+
+1. Sélectionnez l'input (avec son id).
+2. Sélectionnez le bouton.
+3. Ajoutez un événement "click" sur le bouton.
