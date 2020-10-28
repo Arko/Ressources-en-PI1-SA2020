@@ -10,7 +10,7 @@ Fonctions et éléments utiles pour la série :
 
 ## Exercice 1
 
-1. Créez deux tableaux vides : `pairs` et `impairs`.
+1. Créez deux tableaux ([Array](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array)) vides : `pairs` et `impairs`.
 2. Créez une boucle qui va de 1 à 100.
 3. À chaque tour de la boucle, ajouter le chiffre au tableau qui lui correspond : les chiffres pairs dans le tableau `pairs`, les impairs dans `impairs`. Indices : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push).
 
@@ -21,7 +21,7 @@ Fonctions et éléments utiles pour la série :
 Sur la base du tableau `impairs` obtenu dans l'exercice 1...
 
 1. Créez un nouveau tableau : `parTrois`.
-2. À l'aide d'une boucle, itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3. Indices : [modulo (%)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques)
+2. À l'aide d'une boucle ([for](https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript)), itérez sur le tableau `impairs` et remplissez le tableau `parTrois` avec les chiffres divisibles par 3. Indices : [modulo (%)](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques)
 
 [Solution](solutions/exercice2.html)
 
