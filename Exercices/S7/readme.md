@@ -78,7 +78,7 @@ Lorsque que le jeu est gagné, changer la recette mystère automatiquement afin 
 <details>
     <summary>Indice 1</summary>
 
-Le test de condition "jeu gagné" existe déjà aux la ligne 168-170.
+Le test de condition "jeu gagné" existe déjà aux lignes 168-170.
 
 Que pouvez-vous faire ici pour renouveller la recette mystère ?
 </details>
