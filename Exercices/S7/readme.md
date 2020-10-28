@@ -271,6 +271,42 @@ const garnitures = [
 </details>
 
 
+### A4: Empêcher de mettre plusieurs fois la même garniture
+
+Le code actuel permet de mettre plusieurs fois la même garniture sur la pizza ! Puisque chaque pizza mystère est composée de garnitures différentes, empêchez l'utilisateur de proposer plusieurs fois la même garniture.
+
+Ceci implique plusieurs étapes :
+* Garder une trace des garnitures choisies jusqu'à présent.
+* Vérifier que la garniture cliquée soit différente que les garnitures déjà choisies.
+* Signaler à l'utilisateur qu'une garniture est déjà choisie s'il s'apprête à mettre une garniture déjà sur la pizza.
+* S'assurer de vider la liste des garnitures choisies lorsque l'utilisateur valide la pizza.
+
+<details>
+    <summary>Indice 1</summary>
+
+Il va falloir trouver un moyen de garder une trace des garnitures cliquées par l'utilisateur. Avec un tableau par exemple ?
+
+```javascript
+// tableau contenant les garnitures que le pizzaiolo a mis sur la pizza.
+const garnituresChoisies = [];
+```
+</details>
+
+<details>
+    <summary>Indice 2</summary>
+
+Une fois que l'on garde une trace des garnitures cliquées par l'utilisateur, vérifier, lors d'un clic sur une garniture, que la garniture cliquée n'est pas dans la liste de celles déjà cliquées.
+
+Modifiez la fonction `choisirGarniture()`.
+</details>
+
+<details>
+    <summary>Indice 3</summary>
+
+Attention ! Il faudra vider la liste des garnitures cliquées à chaque fois que l'utilisateur valide la pizza, **qu'elle soit correcte ou non**.
+</details>
+
+
 ### Exercice bonus: Boule magique
 
 Maintenant que vous êtes familier avec la manipulation de tableaux et le tirage de nombres au hasard, peut-être voulez-vous essayer de créer un autre jeu de toute pièce: Un boule magique !
