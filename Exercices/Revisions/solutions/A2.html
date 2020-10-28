@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1</title>
+</head>
+<body>
+  <script>
+    // SOLUTION A1 ////////
+    // SOLUTION A2 PLUS BAS
+    ///////////////////////
+    // A1.1
+    let chiffre = 10;
+
+    // A1.2
+    let texte = "Hello world!";
+
+    // A1.3
+    let booleenne = true;
+
+    // A1.4
+    const notes = [5, 5.5, 5, 4, 6, 4.5];
+
+    // A1.5
+    const couleurs = ["red", "blue", "green"];
+
+    // A1.6
+    const tableaux = [[], [], []];
+
+    // A1.7
+    const voiture = {
+      marque: "Mazda",
+      modele: "RX-7",
+      couleur: "Rouge",
+      puissance: 105,
+      kilometres: 25000,
+      prix: 11500
+    };
+
+    // A1.8
+    const garage = [
+      {
+        marque: "Mazda",
+        modele: "RX-7",
+        couleur: "Rouge",
+        puissance: 105,
+        kilometres: 25000,
+        prix: 11500
+      },
+      {
+        marque: "Lotus",
+        modele: "Elise",
+        couleur: "Orange",
+        puissance: 145,
+        kilometres: 10000,
+        prix: 23000
+      },
+      {
+        marque: "Ford Mustang",
+        modele: "Mach 1",
+        couleur: "Jaune",
+        puissance: 230,
+        kilometres: 58000,
+        prix: 68000
+      }
+    ]
+
+    // SOLUTION A2
+    // A2.1
+    chiffre ++;
+    chiffre *= 2;
+    chiffre += 4;
+    chiffre /= 2;
+    chiffre -= 10;
+    console.log(chiffre) // 3
+
+    // A2.2
+    texte += " Hope you're doing well."
+    console.log(texte) // Hello world ! Hope you're doing well
+
+    // A2.3
+    booleenne = chiffre == 10;
+    console.log(booleenne) // false
+
+    // A2.4
+    notes.push(5.5);
+    console.log(notes) // [5, 5.5, 5, 4, 6, 4.5, 5.5]
+
+    // A2.5
+    couleurs.pop()
+    console.log(couleurs) // ["red", "blue"]
+
+    // A2.6
+    tableaux[0].push(1, 2, 3);
+    tableaux[1].push(4, 5, 6);
+    tableaux[2].push(7, 8, 9);
+    console.log(tableaux) // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+    // A2.7
+    console.log(`Je veux acheter une ${voiture.marque} ${voiture.modele} ! Et pour ${voiture.prix}CHF, ça me semble assez honnête !`)
+
+    // A2.8
+    console.log((garage[0].prix + garage[1].prix + garage[2].prix) / 3) // Avec le garage de la solution : 34166.666666666664
+  </script>
+</body>
+</html>
