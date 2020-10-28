@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D5</title>
+</head>
+<body>
+  <!-- D5.1 -->
+  <input type="number">
+  <button>Cliquez</button>
+  <script>
+    // D5.2
+    const input = document.querySelector('input');
+    const bouton = document.querySelector("button");
+
+    // D5.3
+    bouton.addEventListener("click", dessinerDiv);
+
+    // D5.4
+    function dessinerDiv() {
+      // 1
+      const valeurInput = input.value;
+
+      // 2
+      const div = document.createElement("div");
+
+      // 3
+      if (valeurInput < 100) {
+        div.style.width = "25px";
+        div.style.height = "25px";
+      } else {
+        div.style.width = "40px";
+        div.style.height = "40px";
+      }
+      div.style.border = "1px black solid";
+      div.style.textAlign = "center";
+      div.style.backgroundColor = `hsl(${valeurInput * 10}, 100%, 50%)`;
+
+      // 4
+      div.innerHTML = valeurInput;
+
+      // 5
+      document.body.appendChild(div);
+    }
+  </script>
+</body>
+</html>

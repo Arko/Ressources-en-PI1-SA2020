@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D3</title>
+</head>
+<body>
+  <script>
+    // D3.1
+    const chiffre = Math.ceil(Math.random() * 100);
+
+    // D3.2
+    let resultat = "";
+
+    // D3.3
+    if (chiffre >= 1 && chiffre <= 25) {
+      resultat = "Le chiffre est dans le premier quart (1 à 25)";
+    }
+    // D3.4
+    else if (chiffre >= 26 && chiffre <= 50) {
+      resultat = "Le chiffre est dans le deuxième quart (26 à 50)";
+    }
+    // D3.5
+    else if (chiffre >= 51 && chiffre <= 75) {
+      resultat = "Le chiffre est dans le troisième quart (51 à 75)";
+    }
+    // D3.6
+    else {
+      resultat = "Le chiffre est dans le quatrième quart (76 à 100)";
+    }
+
+    // D3.7
+    console.log(resultat);
+  </script>
+</body>
+</html>

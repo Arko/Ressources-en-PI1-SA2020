@@ -75,15 +75,19 @@ Créez un ficher HTML qui contient les éléments suivants :
 - Un bouton qui dise "cliquez".
 - un retour à la ligne.
 
-[Solution](./solutions/B1.html)
+[Solution](./solutions/C1.html)
 
 ### Exercice C2
 
 Sélectionnez le titre et changez le en "J'ai hacké le titre !" (rappel : `.innerHTML`).
 
+[Solution](./solutions/C2.html)
+
 ### Exercice C3
 
 Sélectionnez le paragraphe et écrivez "Entrez un nombre dans l'input et cliquez pour une surprise..." dans son HTML (rappel : `.innerHTML`).
+
+[Solution](./solutions/C3.html)
 
 ### Exercice C4
 
@@ -92,6 +96,8 @@ Sélectionnez le paragraphe et écrivez "Entrez un nombre dans l'input et clique
 3. Ajoutez un événement "click" au bouton qui prend une fonction `dessinerDiv` (qu'on va déclarer au point suivant) en _callback_.
 4. Déclarez la fonction `dessinerDiv` vide.
 
+[Solution](./solutions/C4.html)
+
 ### Exercice C5
 
 Complétez la fonction `dessinerDiv` :
@@ -99,10 +105,73 @@ Complétez la fonction `dessinerDiv` :
 1. Déclarez une variable `valeurInput` égale à la valeur de l'input sélectionné.
 2. Déclarez une variable `div` qui contient un nouveau `div` (rappel : `document.createElement()`).
 3. Ajoutez du style à votre div (par exemple `div.style.color`) pour que le div...
-   - ... ait une largeur de 20
-   - ... ait une hauteur de 20
+   - ... ait une largeur de 25px
+   - ... ait une hauteur de 25px
    - ... ait un bordure noire, d'un pixel d'épaisseur, et solide
    - ... aligne le texte contenu au centre
    - ... ait une couleur de fond (de votre choix, la solution propose du HSL mais vous être libre de mettre ce que vous voulez)
 4. Ajoutez `valeurInput` dans le HTML du div (rappel : `.innerHTML`).
 5. Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
+
+[Solution](./solutions/C5.html)
+
+## D - opérations logiques et conditions
+
+### Exercice D1
+
+1. Déclarez une variable `chiffre` égale à `5`.
+2. Affichez dans la console les résultats des tests logiques suivants (tentez de prédire les résultats avant de les afficher dans la console !) :
+   - `chiffre == 5`.
+   - `chiffre != 5`.
+   - `chiffre >= 10`.
+   - `chiffre <= 10`.
+   - `chiffre < 10 && chiffre > 0`.
+
+[Solution](./solutions/D1.html)
+
+### Exercice D2
+
+Créez la fonction `divisiblePar3` avec un argument (`n`) qui, quand elle est appelée, _retourne_ `true` ou `false` en fonction de si le chiffre utilisé est divisible par 3 ou non. Par exemple : `divisiblePar3(54)` sera `true`, mais `divisiblePar3(43)` sera faux.
+
+[Solution](./solutions/D2.html)
+
+### Exercice D3
+
+1. Déclarez la variable `chiffre` qui contient un chiffre aléatoire entre 1 et 100 (`Math.ceil(Math.random() * 100)`).
+2. Déclarez la variable `resultat` qui contient une chaîne de caractères vide.
+3. Si `chiffre` est supérieur à `50`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est supérieur à 50".
+4. Si `chiffre` est inférieur à `50`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est inférieur à 50".
+5. Affichez `resultat` dans la console.
+
+[Solution](./solutions/D3.html)
+
+### Exercice D4
+
+Même exercice que le D4, mais un peu plus compliqué...
+
+1. Déclarez la variable `chiffre` qui contient un chiffre aléatoire entre 1 et 100 (`Math.ceil(Math.random() * 100)`).
+2. Déclarez la variable `resultat` qui contient une chaîne de caractères vide.
+3. Si `chiffre` est compris entre `1` et `25`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est dans le premier quart (1 à 25)".
+4. Si `chiffre` est compris entre `26` et `50`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est dans le deuxième quart (26 à 50)".
+5. Si `chiffre` est compris entre `51` et `75`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est dans le troisième quart (51 à 75)".
+6. Si `chiffre` est compris entre `76` et `100`, modifiez `resultat` pour qu'elle contienne la chaîne "Le chiffre est dans le quatrième quart (76 à 100)".
+7. Affichez `resultat` dans la console.
+
+[Solution](./solutions/D4.html)
+
+### Exercice D5
+
+1. Créez une page HTML contenant un input de type nombre et un bouton.
+2. Sélectionnez l'input et le bouton.
+3. Ajoutez un événement "click" au bouton qui prend une fonction `dessinerDiv` (qu'on va déclarer au point suivant) en _callback_.
+4. Déclarez la fonction `dessinerDiv` et mettez-y les instructions suivantes :
+   1. Déclarez une variable `valeurInput` égale à la valeur de l'input sélectionné.
+   2. Déclarez une variable `div` qui contient un nouveau `div` (rappel : `document.createElement()`).
+   3. Ajoutez du style à votre div (par exemple `div.style.color`) pour que le div...
+      - ... ait une largeur de 25px si le `valeurInput` est inférieur à 100, 40px si `valeurInput` est supérieur ou égal à 100.
+      - ... ait une hauteur de 25px si le `valeurInput` est inférieur à 100, 40px si `valeurInput` est supérieur ou égal à 100.
+      - ... ait un bordure noire, d'un pixel d'épaisseur, et solide
+      - ... aligne le texte contenu au centre
+      - ... ait une couleur de fond (de votre choix, la solution propose du HSL mais vous être libre de mettre ce que vous voulez)
+   4. Ajoutez `valeurInput` dans le HTML du div (rappel : `.innerHTML`).
+   5. Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
