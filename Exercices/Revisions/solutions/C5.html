@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C2</title>
+</head>
+<body>
+  <h1>Exercices DOM</h1>
+  <p></p>
+  <input type="number" id="nombre">
+  <button>Cliquez</button>
+  <br>
+  <script>
+    // C2
+    const h1 = document.querySelector('h1');
+    h1.innerHTML = "J'ai hacké le titre !";
+
+    // C3
+    const p = document.querySelector('p');
+    p.innerHTML = "Entrez un nombre dans l'input et cliquez pour une surprise...";
+
+    // C4.1
+    const input = document.getElementById("nombre");
+
+    // C4.2
+    const bouton = document.querySelector('button');
+
+    // C4.3
+    bouton.addEventListener("click", dessinerDiv)
+
+    // C4.4
+    function dessinerDiv() {
+      // C5.1
+      const valeurInput = input.value;
+
+      // C5.2
+      const div = document.createElement("div");
+
+      // C5.3
+      div.style.width = "20px";
+      div.style.height = "20px";
+      div.style.border = "1px black solid";
+      div.style.textAlign = "center";
+      div.style.backgroundColor = `hsl(${valeurInput * 10}, 100%, 50%)`;
+
+      // C5.4
+      div.innerHTML = valeurInput;
+
+      // C5.5
+      document.body.appendChild(div);
+    };
+
+    
+  </script>
+</body>
+</html>

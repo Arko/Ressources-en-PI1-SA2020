@@ -79,14 +79,30 @@ Créez un ficher HTML qui contient les éléments suivants :
 
 ### Exercice C2
 
-Sélectionnez le titre et changez le en "J'ai hacké le titre !"
+Sélectionnez le titre et changez le en "J'ai hacké le titre !" (rappel : `.innerHTML`).
 
 ### Exercice C3
 
-Sélectionnez le paragraphe et écrivez "Entrez un nombre dans l'input et cliquez pour une surprise..." dans son HTML.
+Sélectionnez le paragraphe et écrivez "Entrez un nombre dans l'input et cliquez pour une surprise..." dans son HTML (rappel : `.innerHTML`).
 
 ### Exercice C4
 
 1. Sélectionnez l'input (avec son id).
 2. Sélectionnez le bouton.
-3. Ajoutez un événement "click" sur le bouton.
+3. Ajoutez un événement "click" au bouton qui prend une fonction `dessinerDiv` (qu'on va déclarer au point suivant) en _callback_.
+4. Déclarez la fonction `dessinerDiv` vide.
+
+### Exercice C5
+
+Complétez la fonction `dessinerDiv` :
+
+1. Déclarez une variable `valeurInput` égale à la valeur de l'input sélectionné.
+2. Déclarez une variable `div` qui contient un nouveau `div` (rappel : `document.createElement()`).
+3. Ajoutez du style à votre div (par exemple `div.style.color`) pour que le div...
+   - ... ait une largeur de 20
+   - ... ait une hauteur de 20
+   - ... ait un bordure noire, d'un pixel d'épaisseur, et solide
+   - ... aligne le texte contenu au centre
+   - ... ait une couleur de fond (de votre choix, la solution propose du HSL mais vous être libre de mettre ce que vous voulez)
+4. Ajoutez `valeurInput` dans le HTML du div (rappel : `.innerHTML`).
+5. Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
