@@ -47,7 +47,9 @@
         divs.forEach((div) => (totalValeursDivs += Number(div.innerHTML)));
 
         if (totalValeursDivs == 0) {
+          // F1.3 - alert
           alert("C'est la calme plat...");
+          // F1.4 - supprimer les eventListener
           divs.forEach((div) => div.removeEventListener('mouseover', moinsUn));
         }
       }
