@@ -185,16 +185,22 @@ Même exercice que le D4, mais un peu plus compliqué...
 1. Créez une boucle qui va de 1 à 100.
 2. Affichez les chiffres de la boucle dans la console.
 
+[Solution](./solutions/E1.html)
+
 ### Exercice E2
 
 1. Créez un tableau `notes` avec les valeurs `5, 5.5, 5, 4, 6, 4.5`.
 2. A l'aide d'une boucle, itérez sur le tableau pour afficher ses valeurs dans la console. Pour rappel, on voudras faire aller la boucle de 0 jusqu'au numéro du dernier index du tableau (dans ce cas, on a 6 éléments donc le dernier index vaut 5 - `index 0 : 5`, `index 1 : 5.5`, `index 2 : 5`, `index 3 : 4`, `index 4 : 6`, `index 5 : 4.5`) ; on peut obtenir la longeur (le nombre d'éléments) du tableau avec [.length](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/length).
+
+[Solution](./solutions/E2.html)
 
 ### Exercice E3
 
 1. Créez un tableau `chiffres` vide.
 2. A l'aide d'une boucle qui va de 1 à 50, remplir `chiffres` avec les chiffres de la boucle (rappel : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)).
 3. Affichez `chiffres` dans la console
+
+[Solution](./solutions/E3.html)
 
 ### Exercice E4
 
@@ -206,6 +212,8 @@ Même exercice que le D4, mais un peu plus compliqué...
 6. Créez une variable `total` égale à `0`.
 7. A l'aide d'une boucle, itérez sur le tableau `fois5` et additionnez chaque valeur à total.
 8. Affichez `total` dans la console.
+
+[Solution](./solutions/E4.html)
 
 ### Exercice E5
 
@@ -225,6 +233,8 @@ Même exercice que le D4, mais un peu plus compliqué...
    - Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
 4. Dans la première boucle (après la deuxième boucle) créez un élément `br` et ajoutez-le à la page.
 
+[Solution](./solutions/E5.html)
+
 ## F - Exercices avancés
 
 ### Exercice F1
@@ -235,3 +245,5 @@ Sur la base du code obtenu à la fin de l'exercice E5, ajoutez une interaction s
 2. S'assurer de ne pas pouvoir diminuer la valeur du `innderHTML` d'un div si elle est égale à 0.
 3. (BONUS) Si toutes les divs de la grilles valent 0, faire une `alert()` à l'utilisateur.
 4. (BONUS) Si toutes les divs de la grilles valent 0, suppriemr l'eventListener ([.removeEventListener](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/removeEventListener)) de tous les divs.
+
+[Solution](./solutions/F1.html)
