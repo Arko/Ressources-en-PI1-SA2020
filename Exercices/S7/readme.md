@@ -116,7 +116,7 @@ Consultez la documentation de [window.alert()](https://developer.mozilla.org/fr/
 <details>
     <summary>Solution</summary>
 
-Ajoutez après la ligne 169 avec un appel à `alert()`
+Ajoutez après la ligne 169 un appel à `alert()`
 
 ```javascript
 // Si pas de réponse jusqu'ici, c'est gagné !
