@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E4</title>
-</head>
-<body>
-  <script>
-    
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E4</title>
+  </head>
+  <body>
+    <script>
+      // E4.1
+      const chiffres = [];
+
+      // E4.2
+      for (let i = 1; i <= 50; i++) {
+        chiffres.push(Math.ceil(Math.random() * 10));
+      }
+
+      // E4.3
+      console.log(chiffres.length == 50);
+
+      // E4.4
+      const fois5 = [];
+
+      // E4.5
+      for (let i = 0; i < chiffres.length; i++) {
+        fois5.push(chiffres[i] * 5);
+      }
+
+      // E4.6
+      let total = 0;
+
+      // E4.7
+      for (let i = 0; i < fois5.length; i++) {
+        total += fois5[i];
+      }
+
+      // E4.8
+      console.log(total);
+    </script>
+  </body>
 </html>

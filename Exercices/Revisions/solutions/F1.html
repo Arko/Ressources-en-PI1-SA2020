@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E6</title>
+  </head>
+  <body>
+    <script>
+      // CODE E5
+      for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 20; j++) {
+          const div = document.createElement('div');
+          const aleatoire = Math.floor(Math.random() * 21);
+          div.style.width = '25px';
+          div.style.height = '25px';
+          div.style.border = '1px black solid';
+          div.style.textAlign = 'center';
+          div.style.display = 'inline-block';
+          div.style.backgroundColor = `hsl(${255 + aleatoire * 3}, 100%, 50%)`;
+          div.innerHTML = aleatoire;
+          // F1.1
+          div.addEventListener('mouseover', moinsUn);
+
+          document.body.appendChild(div);
+        }
+        const br = document.createElement('br');
+        document.body.appendChild(br);
+      }
+
+      function moinsUn() {
+        // F1.1 (suite)
+        const valeur = Number(this.innerHTML);
+        // F1.2
+        if (valeur > 0) {
+          // F1.1 (suite)
+          const nouvelleValeur = valeur - 1;
+          this.innerHTML = nouvelleValeur;
+          this.style.backgroundColor = `hsl(${
+            255 + nouvelleValeur * 3
+          }, 100%, 50%)`;
+        }
+
+        // F1.3 (BONUS)
+        const divs = document.querySelectorAll('div');
+        let totalValeursDivs = 0;
+        divs.forEach((div) => (totalValeursDivs += Number(div.innerHTML)));
+
+        if (totalValeursDivs == 0) {
+          alert("C'est la calme plat...");
+          divs.forEach((div) => div.removeEventListener('mouseover', moinsUn));
+        }
+      }
+    </script>
+  </body>
+</html>

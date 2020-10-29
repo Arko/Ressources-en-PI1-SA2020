@@ -219,7 +219,19 @@ Même exercice que le D4, mais un peu plus compliqué...
      - ... ait une hauteur de 25px
      - ... ait un bordure noire, d'un pixel d'épaisseur, et solide
      - ... aligne le texte contenu au centre
+     - ... soit affiché en `inline-block`
      - ... ait une couleur de fond en fonction du nombre aléatoire (utiliser le [hsl](https://www.w3schools.com/css/css_colors_hsl.asp) comme on l'a vu dans l'exercice S5.6)
    - Ajoutez un nombre aléatoire dans le HTML du `div` (`.innerHTML`).
    - Ajoutez `div` à la page (rappel : `document.body.appendChild()`).
 4. Dans la première boucle (après la deuxième boucle) créez un élément `br` et ajoutez-le à la page.
+
+## F - Exercices avancés
+
+### Exercice F1
+
+Sur la base du code obtenu à la fin de l'exercice E5, ajoutez une interaction sur les divs :
+
+1. Quand l'utilisateur survole un div, soustraire `1` à la valeur de son `innerHTML`, modifier son `innerHTML` et sa couleur en fonction de la nouvelle valeur obtenue.
+2. S'assurer de ne pas pouvoir diminuer la valeur du `innderHTML` d'un div si elle est égale à 0.
+3. (BONUS) Si toutes les divs de la grilles valent 0, faire une `alert()` à l'utilisateur.
+4. (BONUS) Si toutes les divs de la grilles valent 0, suppriemr l'eventListener ([.removeEventListener](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/removeEventListener)) de tous les divs.

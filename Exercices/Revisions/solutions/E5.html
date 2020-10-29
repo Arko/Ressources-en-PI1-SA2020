@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E6</title>
+  </head>
+  <body>
+    <script>
+      // E6.1
+      for (let i = 1; i <= 10; i++) {
+        // E6.2
+        for (let j = 1; j <= 20; j++) {
+          // E6.3
+          const div = document.createElement('div');
+          const aleatoire = Math.floor(Math.random() * 21); // nombre aléatoire entre 0 et 20
+          div.style.width = '25px';
+          div.style.height = '25px';
+          div.style.border = '1px black solid';
+          div.style.textAlign = 'center';
+          div.style.display = 'inline-block';
+          div.style.backgroundColor = `hsl(${255 + aleatoire * 3}, 100%, 50%)`;
+          div.innerHTML = aleatoire;
+          document.body.appendChild(div);
+        }
+        const br = document.createElement('br');
+        document.body.appendChild(br);
+      }
+    </script>
+  </body>
+</html>
