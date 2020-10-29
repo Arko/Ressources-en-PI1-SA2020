@@ -7,7 +7,7 @@ La base de code est étudiée en cours, elle sert de support aux exercices.
 ## Résumé
 
 Un jeu dans lequel le joueur incarne un pizzaïolo.
-Celui doit deviner la bonne recette de pizza pour un client indécis et peu communicatif.
+Celui-ci doit deviner la bonne recette de pizza pour un client indécis et peu communicatif.
 
 Le jeu est gagné dès que le client est satisfait.
 

@@ -194,6 +194,7 @@ Même exercice que le D4, mais un peu plus compliqué...
 
 1. Créez un tableau `chiffres` vide.
 2. A l'aide d'une boucle qui va de 1 à 50, remplir `chiffres` avec les chiffres de la boucle (rappel : [.push()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push)).
+3. Affichez `chiffres` dans la console
 
 ### Exercice E4
 
