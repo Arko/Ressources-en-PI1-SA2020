@@ -65,6 +65,8 @@ Créez une fonction `somme` avec deux argument (`a` et `b`) qui, quand elle est 
 
 ## C - le DOM
 
+Rappel : [DOM](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction)
+
 ### Exercice C1
 
 Créez un ficher HTML qui contient les éléments suivants :
@@ -116,6 +118,8 @@ Complétez la fonction `dessinerDiv` :
 [Solution](./solutions/C5.html)
 
 ## D - opérations logiques et conditions
+
+Rappels : [opérateurs de comparaison](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op%C3%A9rateurs_de_comparaison), [opérateurs logiques](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), [if ... else](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
 
 ### Exercice D1
 
@@ -179,6 +183,8 @@ Même exercice que le D4, mais un peu plus compliqué...
 [Solution](./solutions/D5.html)
 
 ## E - Boucles et tableaux
+
+Rappels : [boucles](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration), [tableaux](https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/tableaux)
 
 ### Exercice E1
 
