@@ -1,6 +1,6 @@
 # Série pour révisions
 
-## A - les variables
+## A - Les variables
 
 ### Exercice A1
 
@@ -34,7 +34,7 @@
 
 [Solution](./solutions/A2.html)
 
-## B - les fonctions
+## B - Les fonctions
 
 Rappel : [MDN - les fonctions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions)
 
@@ -63,7 +63,7 @@ Créez une fonction `somme` avec deux argument (`a` et `b`) qui, quand elle est 
 4. Déclarez une nouvelle variable `resultat` égale au résultat de la fonction `tourDeMagie` appelée avec `chiffre` (`tourDeMagie(chiffre)`).
 5. Affichez `resultat` dans la console.
 
-## C - le DOM
+## C - Le DOM
 
 Rappel : [DOM](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction)
 
@@ -117,7 +117,7 @@ Complétez la fonction `dessinerDiv` :
 
 [Solution](./solutions/C5.html)
 
-## D - opérations logiques et conditions
+## D - Opérations logiques et conditions
 
 Rappels : [opérateurs de comparaison](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op%C3%A9rateurs_de_comparaison), [opérateurs logiques](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), [if ... else](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
 
