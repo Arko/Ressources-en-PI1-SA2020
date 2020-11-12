@@ -250,6 +250,6 @@ Sur la base du code obtenu à la fin de l'exercice E5, ajoutez une interaction s
 1. Quand l'utilisateur survole un div, soustraire `1` à la valeur de son `innerHTML`, modifier son `innerHTML` et sa couleur en fonction de la nouvelle valeur obtenue.
 2. S'assurer de ne pas pouvoir diminuer la valeur du `innderHTML` d'un div si elle est égale à 0.
 3. (BONUS) Si toutes les divs de la grilles valent 0, faire une `alert()` à l'utilisateur.
-4. (BONUS) Si toutes les divs de la grilles valent 0, suppriemr l'eventListener ([.removeEventListener](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/removeEventListener)) de tous les divs.
+4. (BONUS) Si toutes les divs de la grilles valent 0, supprimer l'eventListener ([.removeEventListener](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/removeEventListener)) de tous les divs.
 
 [Solution](./solutions/F1.html)
