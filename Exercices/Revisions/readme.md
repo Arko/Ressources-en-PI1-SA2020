@@ -1,6 +1,6 @@
 # Série pour révisions
 
-## A - les variables
+## A - Les variables
 
 ### Exercice A1
 
@@ -34,7 +34,7 @@
 
 [Solution](./solutions/A2.html)
 
-## B - les fonctions
+## B - Les fonctions
 
 Rappel : [MDN - les fonctions](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctions)
 
@@ -42,18 +42,26 @@ Rappel : [MDN - les fonctions](https://developer.mozilla.org/fr/docs/Web/JavaScr
 
 Créez une fonction `helloWorld` qui, quand elle est appelée, affiche "Hello world" dans la console.
 
+[Solution](./solutions/B1.html)
+
 ### Exercice B2
 
 Créez une fonction `direBonjour` avec un argument (`nom`) qui, quand elle est appelée (`direBonjour("Loris")`), affiche "Bonjour Loris" dans la console.
+
+[Solution](./solutions/B2.html)
 
 ### Exercice B3
 
 Créez une fonction `somme` avec deux argument (`a` et `b`) qui, quand elle est appelée (`somme(2, 3)`), affiche le résultat de la somme des deux chiffres dans la console.
 
+[Solution](./solutions/B3.html)
+
 ### Exercice B4
 
 1. Créez une fonction `soustraction` avec deux argument (`a` et `b`) qui, quand elle est appelée (`soustraction(2, 3)`), _retourne_ le résultat de la soustraction du deuxième chiffre au premier.
 2. Déclarez une variable `resultat` égale au résultat de la soustraction de `10` et `5`.
+
+[Solution](./solutions/B4.html)
 
 ### Exercice B5
 
@@ -63,7 +71,9 @@ Créez une fonction `somme` avec deux argument (`a` et `b`) qui, quand elle est 
 4. Déclarez une nouvelle variable `resultat` égale au résultat de la fonction `tourDeMagie` appelée avec `chiffre` (`tourDeMagie(chiffre)`).
 5. Affichez `resultat` dans la console.
 
-## C - le DOM
+[Solution](./solutions/B5.html)
+
+## C - Le DOM
 
 Rappel : [DOM](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction)
 
@@ -117,7 +127,7 @@ Complétez la fonction `dessinerDiv` :
 
 [Solution](./solutions/C5.html)
 
-## D - opérations logiques et conditions
+## D - Opérations logiques et conditions
 
 Rappels : [opérateurs de comparaison](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op%C3%A9rateurs_de_comparaison), [opérateurs logiques](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), [if ... else](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/if...else)
 
