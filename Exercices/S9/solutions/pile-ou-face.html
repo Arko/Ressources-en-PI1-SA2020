@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        p {
+            display: inline-block;
+            width: 4em;
+            line-height: 4em;
+            border-radius: 4em;
+            border: 4px gray solid;
+            background-color: lightgray;
+        }
+        .pile {
+            border: 4px deepskyblue solid;
+            background-color: lightskyblue;
+        }
+        .face {
+            border: 4px gold solid;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+    <p>X</p>
+    <br>
+    <button>Lancer pièce</button>
+    <script>
+        const boutonLancer = document.querySelector('button');
+        const paragraphe = document.querySelector('p');
+
+        boutonLancer.addEventListener('click', lancerPièce);
+
+        function lancerPièce() {
+            if (Math.round(Math.random())) {
+                paragraphe.className = 'pile';
+                paragraphe.innerHTML = 'P';
+            } else {
+                paragraphe.className = 'face';
+                paragraphe.innerHTML = 'F';
+            }
+        }
+    </script>
+</body>
+</html>

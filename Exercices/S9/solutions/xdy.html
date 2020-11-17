@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        p {
+            display: inline-block;
+            width: 4em;
+            line-height: 4em;
+            border-radius: 1em;
+            border: 4px gray solid;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p>X</p>
+    <br>
+    <input id="x" type="number" value=1> D
+    <input id="y" type="number" value=20>
+    <button>Lancer d6</button>
+    <script>
+        const inputX = document.getElementById('x');
+        const inputY = document.getElementById('y');
+        const boutonLancer = document.querySelector('button');
+        const paragraphe = document.querySelector('p');
+
+        boutonLancer.addEventListener('click', lancerDé);
+
+        function lancerDé() {
+            const roll = Math.floor(Math.random() * inputY.value) + 1;
+            paragraphe.innerHTML = roll * inputX.value;
+        }
+    </script>
+</body>
+</html>
