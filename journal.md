@@ -145,3 +145,11 @@ Semaine d'études libres
 
 
 ## S10: 18.11.20
+
+Travail en groupes sur le projet Démineur.
+
+Nous avons réalisé ensemble et par groupe les **etapes 1 à 9c** du jeu Démineur. Retrouvez les données des exercices dans le [readme.md](Exercices/S10/readme.md).
+
+Les solutions incrémentales des exercices sont à disposition dans le dossier [solutions](Exercices/S10/solutions).
+
+Nous reprendrons la semaine prochaine (S11) avec les étapes 9d à 14.
