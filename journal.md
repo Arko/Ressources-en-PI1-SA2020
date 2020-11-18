@@ -128,3 +128,20 @@ Conseil: expérimentez dans la console de votre navigateur.
 
 ### Série d'exercices (Jeu Pizza Mystère)
 - [S7 - readme.md](Exercices/S7/readme.md)
+
+
+## S8: 04.11.20
+
+Semaine d'études libres
+
+
+## S9: 11.11.20
+
+### Documentation
+- [Math.random()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/random)
+
+### Série d'exercices en mode travaux pratiques
+- [S9 - readme.md](Exercices/S9/readme.md)
+
+
+## S10: 18.11.20
