@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démineur</title>
+    <style>
+        .case {
+            display: inline-block;
+            line-height: 1.5em;
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px black solid;
+            text-align: center;
+        }
+
+        .vue {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Démineur</h1>
+    <button>Nouveau jeu</button>
+    <hr>
+    <div id="grille"></div>
+    <p></p>
+    <script>
+        // Config
+        const largeurGrille = 10;
+        const hauteurGrille = 10;
+
+        // Références
+        const divGrille = document.getElementById('grille');
+
+        // Créer grille de cases
+        for (let ligne = 0; ligne < hauteurGrille; ligne++) {
+            for (let colonne = 0; colonne < largeurGrille; colonne++) {
+                divGrille.appendChild(créerCase());
+            }
+            const br = document.createElement('br');
+            divGrille.appendChild(br);
+        }
+
+        function créerCase() {
+            const el = document.createElement('div');
+            el.className = 'case';
+            el.innerHTML = '&nbsp;';
+            el.addEventListener('click', découvrir);
+            return el;
+        }
+
+        function découvrir() {
+            this.classList.add('vue');
+        }
+        
+    </script>
+</body>
+</html>

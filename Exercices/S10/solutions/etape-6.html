@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démineur</title>
+    <style>
+        .case {
+            display: inline-block;
+            line-height: 1.5em;
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px black solid;
+            text-align: center;
+        }
+
+        .vue {
+            background-color: lightgray;
+        }
+
+        .drapeau {
+            background-color: orange;
+        }
+
+        .mine {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Démineur</h1>
+    <button>Nouveau jeu</button>
+    <hr>
+    <div id="grille"></div>
+    <p></p>
+    <script>
+        // Config
+        const largeurGrille = 10;
+        const hauteurGrille = 10;
+        const difficulté = 0.1;
+
+        // Références
+        const divGrille = document.getElementById('grille');
+
+        // Créer grille de cases
+        for (let ligne = 0; ligne < hauteurGrille; ligne++) {
+            for (let colonne = 0; colonne < largeurGrille; colonne++) {
+                divGrille.appendChild(créerCase());
+            }
+            const br = document.createElement('br');
+            divGrille.appendChild(br);
+        }
+
+        function créerCase() {
+            const el = document.createElement('div');
+            el.className = 'case';
+            el.innerHTML = '&nbsp;';
+            el.estMine = Math.random() < difficulté;
+            el.addEventListener('click', découvrir);
+            el.addEventListener('contextmenu', signaler);
+            return el;
+        }
+
+        function découvrir() {
+            if (this.estMine) {
+                this.innerHTML = 'M';
+                this.classList.add('mine');
+            } else {
+                this.classList.add('vue');
+            }
+        }
+
+        function signaler(event) {
+            this.classList.toggle('drapeau');
+            event.preventDefault();
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démineur</title>
+    <style>
+        .case {
+            display: inline-block;
+            line-height: 1.5em;
+            width: 1.5em;
+            height: 1.5em;
+            border: 1px black solid;
+            text-align: center;
+        }
+
+        .vue {
+            background-color: lightgray;
+        }
+
+        .drapeau {
+            background-color: orange;
+        }
+
+        .mine {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Démineur</h1>
+    <button>Nouveau jeu</button>
+    <hr>
+    <div id="grille"></div>
+    <p></p>
+    <script>
+        // Config
+        const largeurGrille = 10;
+        const hauteurGrille = 10;
+        const difficulté = 0.1;
+
+        // Références
+        const boutonNvJeu = document.querySelector('button');
+        const divGrille = document.getElementById('grille');
+
+        // Variables
+        let cases;
+
+        boutonNvJeu.addEventListener('click', nouveauJeu);
+
+        function nouveauJeu() {
+            divGrille.innerHTML = '';
+            cases = null;
+            remplirGrille();
+        }
+
+        function remplirGrille() {
+            // Créer grille de cases
+            for (let ligne = 0; ligne < hauteurGrille; ligne++) {
+                for (let colonne = 0; colonne < largeurGrille; colonne++) {
+                    divGrille.appendChild(créerCase(ligne, colonne));
+                }
+                const br = document.createElement('br');
+                divGrille.appendChild(br);
+            }
+            // Collectionner les références à chaque cases de la grille dans un tableau JS
+            cases = Array.from(document.querySelectorAll('#grille div'));
+        }
+
+        function créerCase(ligne, colonne) {
+            const el = document.createElement('div');
+            el.index = colonne + largeurGrille * ligne;
+            el.className = 'case';
+            el.innerHTML = '&nbsp;';
+            el.estMine = Math.random() < difficulté;
+            el.addEventListener('click', découvrir);
+            el.addEventListener('contextmenu', signaler);
+            return el;
+        }
+
+        function découvrir() {
+            if (this.estMine) {
+                this.innerHTML = 'M';
+                this.classList.add('mine');
+            } else {
+                explorerCase(this);
+            }
+        }
+
+        function signaler(event) {
+            this.classList.toggle('drapeau');
+            event.preventDefault();
+        }
+
+        function explorerCase(el) {
+            el.classList.add('vue');
+            const casesVoisines = trouverCasesVoisines(el);
+            const count = casesVoisines.reduce((tot, el) => tot += el.estMine, 0);
+            el.innerHTML = count;
+        }
+
+        function trouverCasesVoisines(el) {
+            return cases.filter(c => {
+                let r = false;
+
+                // Cases en dessus et dessous
+                r ||= c.index == (el.index - largeurGrille);
+                r ||= c.index == (el.index + largeurGrille);
+
+                // Cases de gauche (exclues si première colonne)
+                if (el.index % largeurGrille > 0) {
+                    r ||= c.index == (el.index - largeurGrille - 1);
+                    r ||= c.index == (el.index - 1);
+                    r ||= c.index == (el.index + largeurGrille - 1);
+                }
+
+                // Cases de droite (exclues si dernière colonne)
+                if (el.index % largeurGrille < (largeurGrille - 1)) {
+                    r ||= c.index == (el.index - largeurGrille + 1);
+                    r ||= c.index == (el.index + 1);
+                    r ||= c.index == (el.index + largeurGrille + 1);
+                }
+
+                return r;
+            });
+        }
+
+        // Démarrage automatique
+        nouveauJeu()
+        
+    </script>
+</body>
+</html>
