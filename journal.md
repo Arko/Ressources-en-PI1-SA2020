@@ -153,3 +153,25 @@ Nous avons réalisé ensemble et par groupe les **etapes 1 à 9c** du jeu Démin
 Les solutions incrémentales des exercices sont à disposition dans le dossier [solutions](Exercices/S10/solutions).
 
 Nous reprendrons la semaine prochaine (S11) avec les étapes 9d à 14.
+
+
+## S11: 25.11.20
+
+Continué et terminé le travail sur le projet Démineur (étapes 9d à 14).
+
+
+## S12: 2.12.20
+
+Travail sur un nouveau projet à but de révision: "[Vanilla Todos](Exercices/S12/vanilla-todos.html)"
+
+- Manipulations du DOM
+- Tableaux
+- Objets
+
+Et quelques nouvelles fonctionnalités et API du navigateurs:
+- *element*.[parentNode](https://developer.mozilla.org/fr/docs/Web/API/Node/parentNode).[remove()](https://developer.mozilla.org/fr/docs/Web/API/ChildNode/remove)
+- [Array.splice()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/splice)
+- [JSON.stringify](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/stringify) / [JSON.parse](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON/parse)
+- [LocalStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
+
+Enfin, brève démonstration de Bootstrap sur Vanilla Todos, [voir ici](Exercices/S12/vanilla-todos-bootstrap.html).
