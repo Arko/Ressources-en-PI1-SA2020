@@ -25,6 +25,10 @@
         .mine {
             background-color: red;
         }
+
+        .drapeau-vert {
+            background-color: lightgreen;
+        }
     </style>
 </head>
 <body>
@@ -42,16 +46,19 @@
         // Références
         const boutonNvJeu = document.querySelector('button');
         const divGrille = document.getElementById('grille');
+        const paragrapheInfo = document.querySelector('p');
 
         // Variables
         let cases;
+        let minesTotal;
+        let minesIdentifiées;
 
         boutonNvJeu.addEventListener('click', nouveauJeu);
 
         function nouveauJeu() {
-            // Vider la grille
             divGrille.innerHTML = '';
             cases = null;
+            minesIdentifiées = 0;
             remplirGrille();
         }
 
@@ -64,16 +71,19 @@
                 const br = document.createElement('br');
                 divGrille.appendChild(br);
             }
-            // Collectionner les références à chaque case de la grille
-            cases = Array.from(document.querySelectorAll('.case'));
+            // Collectionner les références à chaque cases de la grille dans un tableau JS
+            cases = Array.from(document.querySelectorAll('#grille div'));
+            // Compter le nombre total de mines présentes sur la grille
+            minesTotal = cases.reduce((tot, el) => tot += el.estMine, 0);
+            paragrapheInfo.innerHTML = minesTotal + " mines";
         }
 
         function créerCase(ligne, colonne) {
             const el = document.createElement('div');
             el.index = colonne + largeurGrille * ligne;
-            el.estMine = Math.random() < difficulté;
             el.className = 'case';
             el.innerHTML = '&nbsp;';
+            el.estMine = Math.random() < difficulté;
             el.addEventListener('click', découvrir);
             el.addEventListener('contextmenu', signaler);
             return el;
@@ -89,17 +99,36 @@
         }
 
         function signaler(event) {
-            this.classList.add('drapeau');
+            this.classList.toggle('drapeau');
+            if (this.estMine) {
+                if (this.classList.contains('drapeau')) {
+                    minesIdentifiées++;
+                    console.log("Mine signalée");
+                } else {
+                    minesIdentifiées--;
+                }
+            }
+            vérifierJeu();
             event.preventDefault();
         }
 
         function explorerCase(el) {
             el.classList.add('vue');
-            const casesVoisines = trouverCasesVoisine(el);
-            console.log(casesVoisines)
+            const casesVoisines = trouverCasesVoisines(el);
+            const count = casesVoisines.reduce((tot, el) => tot += el.estMine, 0);
+            el.innerHTML = count;
+
+            // Fonction récursive si le compte égal zéro
+            if (count == 0) {
+                casesVoisines.forEach(el => {
+                    if (! el.classList.contains('vue')) {
+                        explorerCase(el);
+                    }
+                });
+            }
         }
 
-        function trouverCasesVoisine(el) {
+        function trouverCasesVoisines(el) {
             return cases.filter(c => {
                 let r = false;
 
@@ -125,8 +154,21 @@
             });
         }
 
+        function vérifierJeu() {
+            if (minesIdentifiées == minesTotal) {
+                // Etape 14
+                cases.forEach(el => {
+                    if (el.estMine) {
+                        el.innerHTML = 'M';
+                        el.classList.add('drapeau-vert');
+                    }
+                });
+                paragrapheInfo.innerHTML = 'Bravo, vous avez trouvé toutes les mines !'
+            }
+        }
+
         // Démarrage automatique
-        nouveauJeu();
+        nouveauJeu()
         
     </script>
 </body>
