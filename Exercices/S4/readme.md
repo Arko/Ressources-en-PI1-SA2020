@@ -61,7 +61,7 @@ Pour rappel : https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Fonctio
 
 ## Exercice 6
 
-Modifiez ce [code](s4-exercice-6-donnee.html) pour qu'il affiche les mots entrés sous forme de liste.
+Modifiez ce [code](données/s4-exercice-6.html) pour qu'il affiche les mots entrés sous forme de liste.
 
 Documentation :
 - [DOM](https://developer.mozilla.org/fr/docs/Web/API/Document/createElement)
