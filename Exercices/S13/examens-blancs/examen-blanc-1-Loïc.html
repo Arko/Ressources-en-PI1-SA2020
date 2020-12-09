@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S13 Examen en blanc N°1</title>
+    <style>
+        #grille {
+            margin-top: 1em;
+            font-family: sans-serif;
+        }
+        #grille>div {
+            display: inline-block;
+            border: 1px black solid;
+            width: 2em;
+            line-height: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>Générer</button>
+    <div id="grille"></div>
+    <script>
+        // Références
+        const input = document.querySelector('input');
+        const bouton = document.querySelector('button');
+        const grille = document.querySelector('#grille');
+
+        // Evénement sur le bouton
+        bouton.addEventListener('click', générerGrille);
+
+        function générerGrille() {
+            // Récupérer la valeur du champ
+            const n = input.value;
+            // Générer une grille de n lignes et colonnes
+            for (ligne = 0; ligne < n; ligne++) {
+                for (colonne = 0; colonne < n; colonne++) {
+                    créerDiv(ligne, colonne);
+                }
+                // Ajouter retour à la ligne à chaque fin de ligne
+                grille.appendChild(document.createElement('br'));
+            }
+        }
+
+        function créerDiv(ligne, colonne) {
+            const div = document.createElement('div');
+            // Calculer somme
+            const valeur = ligne + colonne;
+            // Insérer la valeur dans le div
+            div.innerHTML = valeur;
+            // Comportement différent si la somme est plus petite que la 
+            // valeur entrée dans le champ - 1
+            if (valeur < input.value - 1) {
+                div.style.backgroundColor = 'lightgreen';
+                // Callback événement avec expression de fonction anonyme
+                div.addEventListener('click', function () {
+                    this.style.backgroundColor = 'red';
+                });
+            } else {
+                div.style.backgroundColor = 'green';
+                // Callback événement avec fonction fléchée ES6
+                div.addEventListener('click', () => {
+                    div.style.backgroundColor = 'orange';
+                });
+            }
+            // Ajouter le div à la grille
+            grille.appendChild(div);
+        }
+    </script>
+</body>
+</html>

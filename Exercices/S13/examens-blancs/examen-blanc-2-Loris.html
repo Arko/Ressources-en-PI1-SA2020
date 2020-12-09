@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>examen blanc 2</title>
+		<style>
+			div {
+				height: 20px;
+				width: 20px;
+				border-radius: 20px;
+				border: 1px black solid;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// n
+			const n = 10;
+
+			// boucles pour la grille
+			for (let i = 0; i < n; i++) {
+				for (let j = 0; j < n; j++) {
+					creerDiv(i, j);
+				}
+				creerRetour();
+			}
+
+			function creerDiv(i, j) {
+				const div = document.createElement('div');
+				div.innerHTML = '&nbsp;';
+
+				// ajouter la couleur (pastel parce que c'est joli)
+				div.style.backgroundColor = `hsl(${j * 25}, 70%, 70%)`;
+				// attribuer une class
+				div.className = j;
+				div.addEventListener('click', changerCouleur);
+
+				if (j <= i) document.body.appendChild(div);
+			}
+
+			function creerRetour() {
+				const br = document.createElement('br');
+				document.body.appendChild(br);
+			}
+
+			function changerCouleur() {
+				// récupérer la class de l'élément cliqué
+				const c = this.className;
+
+				// sélectionner toutes les divs
+				const divs = document.querySelectorAll('div');
+				// itérer sur le tableau de divs
+				divs.forEach((div) => {
+					// si la div a la même class que la class de l'élément cliqué, changer la couleur
+					if (div.className == c) div.style.backgroundColor = 'black';
+				});
+			}
+		</script>
+	</body>
+</html>

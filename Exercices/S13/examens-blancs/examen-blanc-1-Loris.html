@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Examen blanc 1</title>
+		<style>
+			div {
+				width: 25px;
+				line-height: 25px;
+				border: 1px black solid;
+				display: inline-block;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" />
+		<button>Générer</button>
+		<br />
+		<br />
+		<script>
+			// Selections et event sur le bouton
+			const input = document.querySelector('input');
+			const bouton = document.querySelector('button');
+
+			bouton.addEventListener('click', dessinerGrille);
+
+			function dessinerGrille() {
+				// récupérer la valeur de l'input
+				const valeur = input.value;
+
+				for (let i = 0; i < valeur; i++) {
+					for (let j = 0; j < valeur; j++) {
+						// somme du numéro de ligne et colonne
+						const total = i + j;
+						const div = document.createElement('div');
+						div.innerHTML = total;
+						// colorer la moitié de la matrice en "green" ou "lightgreen"
+						div.style.backgroundColor =
+							total >= valeur - 1 ? 'green' : 'lightgreen';
+						// événement sur le click des divs
+						div.addEventListener('click', changerCouleur);
+						document.body.appendChild(div);
+					}
+					const br = document.createElement('br');
+					document.body.appendChild(br);
+				}
+			}
+
+			function changerCouleur() {
+				// récupérer la couleur de la div
+				const couleur = this.style.backgroundColor;
+				// changer la couleur en fonction de la couleur originale
+				if (couleur == 'lightgreen') {
+					this.style.backgroundColor = 'red';
+				} else if (couleur == 'green') {
+					this.style.backgroundColor = 'orange';
+				}
+			}
+		</script>
+	</body>
+</html>
