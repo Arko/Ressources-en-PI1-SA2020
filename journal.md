@@ -175,3 +175,10 @@ Et quelques nouvelles fonctionnalités et API du navigateurs:
 - [LocalStorage](https://developer.mozilla.org/fr/docs/Web/API/Window/localStorage)
 
 Enfin, brève démonstration de Bootstrap sur Vanilla Todos, [voir ici](Exercices/S12/vanilla-todos-bootstrap.html).
+
+
+## S13: 9.12.20
+
+Etude et démonstration de réalisation de cercles en CSS en utilisant la propriété `border-radius`
+
+Deux examens en blanc (1 heure à disposition chaque fois) dont les solutions de Loris et Loïc sont [ici](Exercices/S13/examens-blancs).
