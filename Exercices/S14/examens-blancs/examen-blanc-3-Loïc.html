@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grille {
+            margin-top: 1em;
+        }
+
+        #grille div {
+            display: inline-block;
+            border: 1px black solid;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>Créer</button>
+    <div id="grille"></div>
+    <script>
+        // Références
+        const input = document.querySelector('input');
+        const bouton = document.querySelector('button');
+        const grille = document.querySelector('#grille');
+
+        // Evénements
+        bouton.addEventListener('click', créerGrille);
+
+        // Au clic de la souris, créer une grille de divs
+        function créerGrille() {
+            const valeur = input.value;
+            // Boucles imbriquées pour la génération de la grille
+            for (ligne = 0; ligne < valeur; ligne++) {
+                for (colonne = 0; colonne < valeur; colonne++) {
+                    créerDiv();
+                }
+                // A chaque fin de ligne, ajouter un retour à la ligne
+                grille.appendChild(document.createElement('br'));
+            }
+        }
+
+        // Fonction créant un div
+        function créerDiv() {
+            const div = document.createElement('div');
+            const nombre = Math.ceil(Math.random() * 60);
+            div.innerHTML = nombre;
+            grille.appendChild(div);
+
+            // Coloration conditionnelle et événement de survol
+            if (nombre % 2 == 0 && nombre % 3 == 0) {
+                div.style.backgroundColor = 'aquamarine';
+            } else {
+                div.style.backgroundColor = 'salmon';
+                div.addEventListener('mouseover', () => {
+                    div.style.backgroundColor = 'lightblue';
+                })
+            }
+        }
+    </script>
+</body>
+</html>
