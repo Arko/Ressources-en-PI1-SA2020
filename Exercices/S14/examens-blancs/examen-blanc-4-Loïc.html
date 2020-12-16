@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            line-height: 2em;
+            border: 1px black solid;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const nombres = [2, 3, 2, 4, 5, 2, 8, 4, 5];
+
+        // Pour chaque nombre, 
+        nombres.forEach(n => {
+            // Créer une ligne de `n` divs
+            for (i = 0; i < n; i++) {
+                const div = document.createElement('div');
+                div.innerText = i;
+                div.style.backgroundColor = getColor(i);
+                document.body.appendChild(div);
+                // Evénement de survol (ou clic comme demandé dans la donnée)
+                div.addEventListener('mouseover', () => {
+                    if (div.innerText != 0) {
+                        div.innerText--;
+                        div.style.backgroundColor = getColor(div.innerText);
+                    }
+                });
+            }
+            document.body.appendChild(document.createElement('br'));
+        });
+
+        // Fonction permettant de créer une couleur HSL avec un paramètre
+        function getColor(i) {
+            return `hsl(${i * -36}, 50%, 50%)`
+        }
+    </script>
+</body>
+</html>
